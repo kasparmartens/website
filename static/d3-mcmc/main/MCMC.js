@@ -25,6 +25,31 @@ var MCMC = {
   }
 };
 
+// Squiggle distribution
+var squiggleDist = new MultivariateNormal(matrix([[0],[0]]), matrix([[2,0.25],[0.25,0.5]]));
+MCMC.targetNames.push('squiggle');
+MCMC.targets['squiggle'] = {
+  logDensity: function(x) {
+    var y = zeros(2, 1);
+    var a = 2;
+    y[0] = x[0];
+    y[1] = x[1] + Math.sin(a * x[0]);
+    return squiggleDist.logDensity(y);
+  },
+  gradLogDensity: function(x) {
+    var y = zeros(2, 1);
+    var a = 2;
+    y[0] = x[0];
+    y[1] = x[1] + Math.sin(a * x[0]);
+    var grad = squiggleDist.gradLogDensity(y);
+    var gradx0 = grad[0] + grad[1] * a * Math.cos(a * x[0]);
+    var gradx1 = grad[1];
+    grad[0] = gradx0;
+    grad[1] = gradx1;
+    return grad;
+  }
+};
+
 // Banana distribution
 var bananaDist = new MultivariateNormal(matrix([[0],[4]]), matrix([[1,0.5],[0.5,1]]));
 MCMC.targetNames.push('banana');
@@ -103,25 +128,3 @@ if (!Array.prototype.last){
 };
 
 
-// Squiggle distribution
-var squiggleDist = new MultivariateNormal(matrix([[0],[0]]), matrix([[2,0.25],[0.25,0.5]]));
-MCMC.targetNames.push('squiggle');
-MCMC.targets['squiggle'] = {
-  logDensity: function(x) {
-    var y = zeros(2, 1);
-    y[0] = x[0];
-    y[1] = x[1] + Math.sin(5 * x[0]);
-    return squiggleDist.logDensity(y);
-  },
-  gradLogDensity: function(x) {
-    var y = zeros(2, 1);
-    y[0] = x[0];
-    y[1] = x[1] + Math.sin(5 * x[0]);
-    var grad = squiggleDist.gradLogDensity(y);
-    var gradx0 = grad[0] + grad[1] * 5 * Math.cos(5 * x[0]);
-    var gradx1 = grad[1];
-    grad[0] = gradx0;
-    grad[1] = gradx1;
-    return grad;
-  }
-};

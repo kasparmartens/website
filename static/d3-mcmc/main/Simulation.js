@@ -68,12 +68,12 @@ Simulation.prototype.setTarget = function(targetName) {
 Simulation.prototype.computeContours = function(logDensity) {
 
   // get contours
-  var nx = 256, ny = 256, nz = 7;
+  var nx = 256, ny = 256, nz = 6;
   var x = linspace(-6, 6, nx);
-  var y = linspace(-6, 6, ny);
+  var y = linspace(-3, 3, ny);
   var data = [];
   var point = zeros(2, 1);
-  var min = 1e10, max = 0;
+  var min = 1e8, max = 0;
   for (var i = 0; i < nx; ++i) {
     data.push([]);
     point[0] = x[i];
@@ -94,8 +94,9 @@ Simulation.prototype.computeContours = function(logDensity) {
   this.mcmc.contourLevels = z;
   for (var i = 0; i < contours.length; ++i) {
     var contour = [];
-    for (var j = 0; j < contours[i].length; ++j)
+    for (var j = 0; j < contours[i].length; ++j){
       contour.push([contours[i][j].x, contours[i][j].y]);
+    }
     this.mcmc.contours.push(contour);
   }
 
