@@ -33,17 +33,17 @@ MCMC.targets['squiggle'] = {
     var y = zeros(2, 1);
     var a = 2;
     y[0] = x[0];
-    y[1] = x[1] + Math.sin(a * x[0]);
+    y[1] = 2*x[1] + Math.sin(a * x[0]);
     return squiggleDist.logDensity(y);
   },
   gradLogDensity: function(x) {
     var y = zeros(2, 1);
     var a = 2;
     y[0] = x[0];
-    y[1] = x[1] + Math.sin(a * x[0]);
+    y[1] = 2*x[1] + Math.sin(a * x[0]);
     var grad = squiggleDist.gradLogDensity(y);
     var gradx0 = grad[0] + grad[1] * a * Math.cos(a * x[0]);
-    var gradx1 = grad[1];
+    var gradx1 = 2*grad[1];
     grad[0] = gradx0;
     grad[1] = gradx1;
     return grad;
