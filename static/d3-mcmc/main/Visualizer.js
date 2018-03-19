@@ -18,9 +18,9 @@ function Visualizer(canvas, xHistCanvas, yHistCanvas) {
   this.showHistograms    = false;
 
   this.arrowSize       = 10;
-  this.proposalColor   = '#999';
-  this.trajectoryColor = '#333';
-  this.acceptColor     = '#4c4';
+  this.proposalColor   = '#ff6600';
+  this.trajectoryColor = '#ff6600';
+  this.acceptColor     = '#ff6600';
   this.rejectColor     = '#f00';
   this.nutsColor       = '#09c';
   this.contourColor    = '#69b';
@@ -284,7 +284,7 @@ Visualizer.prototype.drawArrow = function(canvas, options) {
 Visualizer.prototype.drawSample = function(canvas, center) {
   var context = canvas.getContext('2d');
   context.globalCompositeOperation = 'multiply';
-  this.drawCircle(canvas, { fill: 'rgb(103,0,13)', center: center, radius: 0.02, lw: 0});
+  this.drawCircle(canvas, { fill: '#ff6600', center: center, radius: 0.02, lw: 0});
   context.globalCompositeOperation = 'source-over';
 };
 
