@@ -127,9 +127,9 @@ Simulation.prototype.computeContours = function(logDensity) {
       var base = 4 * ((ny - 1 - j) * nx + i);
       var value = Math.sqrt((data[i][j] - min) / (max - min)) * 255;
       // rgb(30, 70, 90)
-      image.data[base] = 30;
-      image.data[base + 1] = 70;
-      image.data[base + 2] = 90;
+      image.data[base] = 161;
+      image.data[base + 1] = 180;
+      image.data[base + 2] = 196;
       image.data[base + 3] = value | 0;
     }
   }
