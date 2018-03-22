@@ -1,3 +1,10 @@
 .project-item {
   margin-bottom: 1.5rem;
 }
+
+.card h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: none;
+}

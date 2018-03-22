@@ -11,11 +11,11 @@ weight = 5
  
 +++
 
-# Biography
+# About me
 
-Kaspar Märtens is a PhD student in Statistical Machine Learning at the University of Oxford. He is supervised by [Christopher Yau](http://cwcyau.github.io/) and [Chris Holmes](http://www.stats.ox.ac.uk/~cholmes/). 
+I am a PhD student in Statistical Machine Learning at the University of Oxford,  supervised by [Christopher Yau](http://cwcyau.github.io/) and [Chris Holmes](http://www.stats.ox.ac.uk/~cholmes/). 
 
-Kaspar has a broad interest in Bayesian statistics and machine learning. His current research focuses on developing probabilistic latent variable models as well as inference techniques with applications to biomedical data. 
+I have a broad interest in Bayesian statistics and machine learning. My current research focuses on developing probabilistic latent variable models as well as inference techniques with applications to biomedical data. 
 
-Kaspar is also passionate about data visualisation and R. He co-organises the [Oxford R user group](https://www.meetup.com/Oxford-R-User-Group/?_cookie-check=YjefwQo7hibpOazc) meetups. 
+I am also passionate about data visualisation and R. I co-organise the [Oxford R user group](https://www.meetup.com/Oxford-R-User-Group/?_cookie-check=YjefwQo7hibpOazc) meetups. 
 

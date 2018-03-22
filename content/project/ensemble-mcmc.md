@@ -1,15 +1,15 @@
 +++
 # Date this page was created.
-date = "2016-04-27"
+date = "2018-01-01"
 
 # Project title.
-title = "Predicting heritable traits from genome and phenome"
+title = "Augmented Ensemble MCMC sampling in Factorial Hidden Markov Models"
 
 # Project summary to display on homepage.
 summary = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
-image_preview = "y10k.jpg"
+image_preview = "ensemble.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
