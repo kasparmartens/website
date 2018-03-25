@@ -245,22 +245,22 @@ defaultContentLanguageInSubdir = false
 
 [[menu.main]]
   name = "Home"
-  url = "#about"
+  url = "#hero"
   weight = 1
 
 [[menu.main]]
-  name = "Publications"
-  url = "#publications_selected"
+  name = "About"
+  url = "#about"
   weight = 2
-
+  
 [[menu.main]]
-  name = "Posts"
-  url = "#posts"
+  name = "Selected papers"
+  url = "#publications_selected"
   weight = 3
 
 [[menu.main]]
-  name = "Projects"
-  url = "#projects"
+  name = "Publications"
+  url = "#publications"
   weight = 4
 
 

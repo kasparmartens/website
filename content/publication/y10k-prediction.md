@@ -21,9 +21,9 @@ publication = "In *Nature communications*"
 publication_short = "In *Nature communications*"
 
 # Abstract and optional shortened version.
-abstract = "In spite of decades of linkage and association studies and its potential impact on human health, reliable prediction of an individual’s risk for heritable disease remains difficult. Large numbers of mapped loci do not explain substantial fractions of heritable variation, leaving an open question of whether accurate complex trait predictions can be achieved in practice. Here, we use a genome sequenced population of ∼7,000 yeast strains of high but varying relatedness, and predict growth traits from family information, effects of segregating genetic variants and growth in other environments with an average coefficient of determination R2 of 0.91. This accuracy exceeds narrow-sense heritability, approaches limits imposed by measurement repeatability and is higher than achieved with a single assay in the laboratory. Our results prove that very accurate prediction of complex traits is possible, and suggest that additional data from families rather than reference cohorts may be more useful for this purpose."
+abstract = "In spite of decades of linkage and association studies and its potential impact on human health, reliable prediction of an individual’s risk for heritable disease remains difficult. Large numbers of mapped loci do not explain substantial fractions of heritable variation, leaving an open question of whether accurate complex trait predictions can be achieved in practice. Here, we use a genome sequenced population of ∼7,000 yeast strains of high but varying relatedness, and predict growth traits from family information, effects of segregating genetic variants and growth in other environments with an average coefficient of determination $R^2$ of 0.91. This accuracy exceeds narrow-sense heritability, approaches limits imposed by measurement repeatability and is higher than achieved with a single assay in the laboratory. Our results prove that very accurate prediction of complex traits is possible, and suggest that additional data from families rather than reference cohorts may be more useful for this purpose."
 
-abstract_short = "Short abstract HERE"
+abstract_short = "Here, we explore whether accurate complex trait predictions can be achieved in practice. Using a genome sequenced population of ∼7,000 yeast strains of high but varying relatedness, we consider a variety of models for predicting growth traits from various sources of information (family information, genetic variants, and growth in other environments)."
 
 # Featured image thumbnail (optional)
 image_preview = "y10k_banner.png"
@@ -47,10 +47,6 @@ url_code = "https://github.com/kasparmartens/y10k-prediction"
 # url_poster = "#"
 # url_source = "#"
 
-# Custom links (optional).
-#   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-# url_custom = [{name = "Link to paper", url = "https://doi.org/10.1093/bioinformatics/btw304"}]
-
 # Does the content use math formatting?
 math = true
 
@@ -61,7 +57,7 @@ highlight = true
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
 image = "y10k_banner.png"
-caption = "My caption :smile:"
+caption = ""
 
 +++
 

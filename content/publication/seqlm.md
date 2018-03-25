@@ -1,5 +1,5 @@
 +++
-title = "seqlm: an MDL Based Method for Identifying Differentially Methylated Regions in High Density Methylation Array Data"
+title = "seqlm: an MDL based method for identifying differentially methylated regions in high density methylation array data"
 date = "2016-05-13"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
@@ -23,7 +23,7 @@ publication_short = "In *Bioinformatics*"
 # Abstract and optional shortened version.
 abstract = "**Motivation:** One of the main goals of large scale methylation studies is to detect differentially methylated loci. One way is to approach this problem sitewise, i.e. to find differentially methylated positions (DMPs). However, it has been shown that methylation is regulated in longer genomic regions. So it is more desirable to identify differentially methylated regions (DMRs) instead of DMPs. The new high coverage arrays, like Illuminas 450k platform, make it possible at a reasonable cost. Few tools exist for DMR identification from this type of data, but there is no standard approach. <br/> **Results:** We propose a novel method for DMR identification that detects the region boundaries according to the minimum description length (MDL) principle, essentially solving the problem of model selection. The significance of the regions is established using linear mixed models. Using both simulated and large publicly available methylation datasets, we compare seqlm performance to alternative approaches. We demonstrate that it is both more sensitive and specific than competing methods. This is achieved with minimal parameter tuning and, surprisingly, quickest running time of all the tried methods. Finally, we show that the regional differential methylation patterns identified on sparse array data are confirmed by higher resolution sequencing approaches."
 
-abstract_short = "Short abstract HERE"
+abstract_short = "Here, we propose a statistical method for identifying differentially methylated regions, based on the minimum description length (MDL) principle."
 
 # Featured image thumbnail (optional)
 image_preview = "seqlm_merged.png"
@@ -43,9 +43,8 @@ url_code = "https://github.com/raivokolde/seqlm"
 # url_dataset = "#"
 # url_project = "#"
 # url_slides = "#"
-# url_video = "#"
-# url_poster = "#"
-url_source = "#"
+url_poster = "poster/seqlm_poster.pdf"
+# url_source = "#"
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.

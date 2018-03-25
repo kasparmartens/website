@@ -1,6 +1,6 @@
 +++
 title = "Augmented Ensemble MCMC sampling in Factorial Hidden Markov Models"
-date = "2017-06-01"
+date = "2018-02-09"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["K Märtens", "MK Titsias", "C Yau"]
@@ -17,13 +17,13 @@ authors = ["K Märtens", "MK Titsias", "C Yau"]
 publication_types = ["0"]
 
 # Publication name and optional abbreviated version.
-publication = ""
-publication_short = ""
+publication = "Preprint"
+publication_short = "Preprint"
 
 # Abstract and optional shortened version.
 abstract = "Bayesian inference for factorial hidden Markov models is challenging due to the exponentially sized latent variable space. Standard Monte Carlo samplers can have difficulties effectively exploring the posterior landscape and are often restricted to exploration around localised regions that depend on initialisation. We introduce a general purpose ensemble Markov Chain Monte Carlo (MCMC) technique to improve on existing poorly mixing samplers. This is achieved by combining parallel tempering and an auxiliary variable scheme to exchange information between the chains in an efficient way. The latter exploits a genetic algorithm within an augmented Gibbs sampler. We compare our technique with various existing samplers in a simulation study as well as in a cancer genomics application, demonstrating the improvements obtained by our augmented ensemble approach."
 
-abstract_short = "We introduce an augmented ensemble MCMC technique to improve on existing poorly mixing samplers. This is achieved by combining parallel tempering and an auxiliary variable scheme to exchange information between the chains in an efficient way."
+abstract_short = "Here, we introduce an augmented ensemble MCMC technique to improve on existing poorly mixing samplers for factorial HMMs. This is achieved by combining parallel tempering and an auxiliary variable scheme to exchange information between the chains in an efficient way."
 
 # Featured image thumbnail (optional)
 image_preview = "schema_crossover.png"
@@ -39,12 +39,12 @@ projects = []
 # Links (optional).
 # url_pdf = ""
 # url_code = ""
-# url_preprint = "#"
+url_preprint = "https://arxiv.org/abs/1703.08520"
 # url_dataset = "#"
 # url_project = "#"
 # url_slides = "#"
 # url_video = "#"
-# url_poster = "#"
+url_poster = "poster/ensemblemcmc_poster.pdf"
 # url_source = "#"
 
 # Custom links (optional).
@@ -60,9 +60,9 @@ highlight = true
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
-image = ""
-caption = "My caption :smile:"
+image = "ensemble_logposteriors.png"
+caption = ""
 
 +++
 
-More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code.
+Updated preprint with new experiments will be soon on arxiv!
