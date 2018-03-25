@@ -8,7 +8,7 @@
 {{ end }}
 {{ with $.Params.url_pdf }}
 <a class="btn btn-primary btn-outline{{ if $is_list }} btn-xs{{end}}" href="{{ . | absURL }}" target="_blank" rel="noopener">
-  {{ i18n "btn_pdf" }}
+  {{ "Link to paper" }}
 </a>
 {{ end }}
 {{ $directory := "static/files/citations/" }}
