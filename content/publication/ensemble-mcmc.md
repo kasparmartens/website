@@ -38,8 +38,8 @@ projects = []
 
 # Links (optional).
 # url_pdf = ""
-# url_code = ""
 url_preprint = "https://arxiv.org/abs/1703.08520"
+url_code = "https://github.com/kasparmartens/ensembleFHMM"
 # url_dataset = "#"
 # url_project = "#"
 # url_slides = "#"

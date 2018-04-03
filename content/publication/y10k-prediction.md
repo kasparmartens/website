@@ -60,5 +60,3 @@ image = "y10k_banner.png"
 caption = ""
 
 +++
-
-More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code.
