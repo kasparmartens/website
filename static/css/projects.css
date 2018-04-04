@@ -1,5 +1,5 @@
-.project-item {
-  margin-bottom: 1.5rem;
+.home-section {
+  padding: 50px 0 50px 0;
 }
 
 .card h4 {
@@ -8,3 +8,4 @@
   line-height: 1.5;
   text-transform: none;
 }
+
