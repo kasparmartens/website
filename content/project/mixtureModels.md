@@ -1,6 +1,6 @@
 +++
 # Date this page was created.
-date = "2015-01-01"
+date = "2017-01-01"
 
 # Project title.
 title = "Non-parametric mixture models"
