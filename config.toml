@@ -259,10 +259,14 @@ defaultContentLanguageInSubdir = false
   weight = 3
 
 [[menu.main]]
-  name = "Other projects"
+  name = "More projects"
   url = "#projects"
   weight = 4
 
+[[menu.main]]
+  name = "Teaching"
+  url = "#andmeteadus"
+  weight = 4
 
 # Languages
 #   Create a [languages.X] block for each language you want, where X is the language ID.
