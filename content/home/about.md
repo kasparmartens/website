@@ -19,3 +19,4 @@ I have a broad interest in Bayesian statistics and machine learning. My PhD rese
 
 I am also enthusiastic about R and data visualisation. I co-organise the [Oxford R user group](https://www.meetup.com/Oxford-R-User-Group/?_cookie-check=YjefwQo7hibpOazc) meetups. 
 
+Prior to the PhD, I studied for BSc and MSc at the University of Tartu in Estonia. There I was part of the BIIT research group at the Institute of Computer Science, where I worked on statistical modelling in genomics under the supervision of [Raivo Kolde](https://scholar.google.com/citations?user=IYhbHFMAAAAJ&hl=en) and [Leopold Parts](http://www.sanger.ac.uk/people/directory/parts-leopold). 

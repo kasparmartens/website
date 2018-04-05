@@ -15,9 +15,10 @@ weight = 60
 
 +++
 
+### Course on Data Science and Visualisation
+
 <div id="mybanner">
 </div>
 
-[Here](http://andmeteadus.github.io/2015/) you can find course material (in Estonian!) on Data Science and Visualisation, written by me and Tanel Pärnamaa.
-
-This course ([Statistiline andmeteadus ja visualiseerimine](http://andmeteadus.github.io/2015/)) is centered around a number of interesting case studies, and it focuses on teaching good practices of data science in R by applying statistical methods on these real-life problems. 
+[Here](http://andmeteadus.github.io/2015/) you can find course material (in Estonian!) on Data Science and Visualisation, which we created together with Tanel Pärnamaa.
+This course ["Statistiline andmeteadus ja visualiseerimine"](http://andmeteadus.github.io/2015/) is centered around a number of interesting case studies, and it focuses on teaching good practices of data science in R by applying statistical methods to solve these real-life problems. 
