@@ -9,8 +9,8 @@ MCMC.registerAlgorithm('HamiltonianMC', {
   },
 
   init: function(self) {
-    self.leapfrogSteps = 37;
-    self.dt = 0.05;
+    self.leapfrogSteps = 100;
+    self.dt = 0.03;
   },
 
   reset: function(self) {
