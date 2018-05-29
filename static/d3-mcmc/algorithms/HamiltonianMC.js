@@ -28,6 +28,13 @@ MCMC.registerAlgorithm('HamiltonianMC', {
     var q0 = self.chain.last(),
         p0 = MultivariateNormal.getSample(self.dim);
 
+    if(self.chain.length < 2){
+      q0[0, 0] = 0.2;
+      q0[0, 1] = -0.5;
+      p0[0, 0] = 0.5;
+      p0[0, 1] = 0.5;
+    }
+
     var q = q0.copy(),
         p = p0.copy();
 
