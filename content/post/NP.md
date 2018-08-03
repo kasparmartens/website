@@ -47,7 +47,7 @@ Let us consider two scenarios:
 
 The first scenario corresponds to a standard (probabilistic) supervised learning setup: Given a data set of $N$ samples, i.e. given $(x_i, y_i)$ for $i = 1, … ,N$, and assuming there is an underlying true $f$ which has generated the $y_i = f(x_i)$ values, our goal is to learn the posterior distribution over $f$ and use it to get predictive densities at test points $f(x^{\ast})$.
 
-[insert-figure]
+![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/two_scenarios.png)
 
 The second scenario can be seen from the meta-learning viewpoint. Given $D$ data sets $d = 1, …, D$, each consisting of $N_d$ pairs $(x_i^{(d)}, y_i^{(d)})$, if we assume that every data set $d = 1, …, D$ has its own underlying function $f_d$ which has generated the values $y_i = f_d(x_i)$, we might want to learn the posterior of every $f_d$ as well as generalise to a new data set $d^{\ast}$. The latter is especially useful when every data set has only a small number of observations. This information sharing is achieved by specifying that there exists a shared process which underlies all functions $f_d$. For example, in the context of GPs, one can assume that $f_d \sim \mathcal{GP}$ share kernel hyperparameters. Having learned the shared process, when given a new data set $d^{\ast}$, one can use the posterior over functions as a prior and carry out few-shot function regression. 
 
@@ -85,3 +85,37 @@ $$ELBO = …$$
 contains two terms. The first is the expected log-likelihood over the target set. This is evaluated by sampling $z \sim q(z | context, target)$, as indicated on the left part of the inference diagram, and then using these $z$ values for predictions on the target set. The second term has a regularising effect -- it is the KL divergence between $q(z | context, target)$ and $q(z | context)$. Note that this differs slightly from the most commonly encountered variational inference setup with $\text{KL}(q || p)$, where $p$ would be the prior of $z$. This is because in our generative model, we have specified a conditional prior $p(z | context)$ instead of directly specifying $p(z)$. And as this conditional prior depends on $h$, we need to use an approximate $q(z | context)$.
 
 ### Experiments
+
+
+#### NP as a prior over functions
+
+Lets start by exploring the behaviour of NPs as a prior over functions, i.e. in the setting where we haven’t observed any data and haven’t yet trained the model. Having initialised the weights (here I initialised them independently from a standard normal), we can sample $z \sim \mathcal{N}(0, I)$ and generate from the (prior) predictive distribution over a grid of $x^{\ast}$ values to plot the functions. 
+
+As opposed to GPs which have interpretable kernel hyperparameters, the NP prior is much less explicit. There are various architectural choices involved (such as how many hidden layers to use, what activation functions to use etc) which all implicitly affect our prior distribution over the function space. You can see the specific architectural choices behind my experiments in [github.com/kasparmartens/NeuralProcesses](https://github.com/kasparmartens/NeuralProcesses). 
+
+For example, when using sigmoid activations and varying the dimensionality of $z$ in $\\{1, 2, 4, 8\\}$, typical draws from the NP prior look as follows:
+
+![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/draws_from_prior.png)
+
+But when deciding to use the ReLu activations instead, we have placed the prior probability mass over a different set of functions: 
+
+![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/draws_from_prior_relu.png)
+
+#### From the prior to the posterior: Training NP on a small data set
+
+Suppose all we have is the following five data points: 
+
+![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/observed_data.png)
+
+The training procedure for NPs will involve separating the context set and target set. One option is to use a fixed size context set, another is to cover a wider range of scenarios by training using varying context set sizes (e.g. at every iteration we could randomly draw the number of context points from the set $\\{1, 2, 3, 4\\}$). 
+Once we have trained the model on these random subsets, we condition on all of our data (i.e. we take all these five points to be the context points) and plot draws from the posterior. 
+The animation below illustrates the transition from the NP prior to the posterior over the training procedure:
+
+![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment1.gif)
+
+So the NP seems to have successfully learned a distribution over mappings which go through all of our five points. Now lets explore how well it generalises to other mappings, i.e. what happens if we use this trained NP for prediction on a different context set. Here is the posterior when conditioning on the blue points instead:
+
+
+![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment1.png)
+
+Not very surprisingly, the flexible NP model which was trained only on subsets of the five red points, doesn’t generalise to a different set of context points. To get a model which would generalise better, we could consider (pre)training the NP on a larger set of functions. 
