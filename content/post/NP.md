@@ -80,9 +80,9 @@ The approximate posterior $q(z | \cdot)$ is chosen to have the specific form as 
 
 The variational lower bound 
 
-$$ELBO = …$$
+$$ELBO = \mathbb{E}\_{q(z | \text {context}, \text {target})} \left\[ \sum\_{t=1}^T \log p(y_t^{\ast} | z, x_t^{\ast}) + \log \frac{q(z | \text {context})}{q(z | \text {context}, \text {target})} \right\]$$
 
-contains two terms. The first is the expected log-likelihood over the target set. This is evaluated by sampling $z \sim q(z | context, target)$, as indicated on the left part of the inference diagram, and then using these $z$ values for predictions on the target set. The second term has a regularising effect -- it is the KL divergence between $q(z | context, target)$ and $q(z | context)$. Note that this differs slightly from the most commonly encountered variational inference setup with $\text{KL}(q || p)$, where $p$ would be the prior of $z$. This is because in our generative model, we have specified a conditional prior $p(z | context)$ instead of directly specifying $p(z)$. And as this conditional prior depends on $h$, we need to use an approximate $q(z | context)$.
+contains two terms. The first is the expected log-likelihood over the target set. This is evaluated by sampling $z \sim q(z | context, target)$, as indicated on the left part of the inference diagram, and then using these $z$ values for predictions on the target set. The second term has a regularising effect -- it is the negative KL divergence between $q(z | \text {context}, \text {target})$ and $q(z | \text {context})$. Note that this differs slightly from the most commonly encountered variational inference setup with $\text{KL}(q || p)$, where $p$ would be the prior $p(z)$. This is because in our generative model, we have specified a conditional prior $p(z | \text {context})$ instead of directly specifying $p(z)$. As this conditional prior depends on $h$, we do not have access to the exact posterior and instead need to use an approximate $q(z | \text {context})$.
 
 ### Experiments
 
@@ -149,7 +149,7 @@ Note that above we did not use any context set at prediction time, but simply pr
 Taking the context set to be the point $(0, 0)$, shown on the left, will result in quite a broad posterior which looks quite nice, covering functions which resemble $a \sin(x)$ for a certain range of values of $a$ (but note that not for all $a \in [-2, 2]$ it was trained on). 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment2_pred.png)
 
-Adding a second context point $(1, sin(1))$ will result in the posterior shown in the middle. The posterior has changed compared to the previous plot (e.g. functions with a negative values of $a$ are not included any more), but none of the functions goes through the given point. When increasing the number of context points which follow $1.0 \sin(x)$ then the NP posterior will become reasonably close to the true underlying function, as shown on the right. 
+Adding a second context point $(1, \sin(1))$ will result in the posterior shown in the middle. The posterior has changed compared to the previous plot, e.g. functions with a negative values of $a$ are not included any more, but none of the functions goes through the given point. When increasing the number of context points which follow $1.0 \sin(x)$ then the NP posterior will become reasonably close to the true underlying function, as shown on the right. 
 
 Now lets explore how well the trained NP will generalise beyond the class of functions it was trained on. Specifically, lets explore how it will generalise to the following functions $2.5 \sin(x)$ and $| \sin(x) |$. The first requires some extrapolation from the training data. The second one has a similar shape to the functions in training set but unlike the rest its values are non-negative. 
 
