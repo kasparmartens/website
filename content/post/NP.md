@@ -70,8 +70,8 @@ Going through this generative mechanism step-by-step:
 
 Inference for the NP is carried out in the variational inference framework. Specifically, we introduce two approximate distributions: 
 
-* $q(z | context)$ to approximate the conditional prior $p(z | context)$
-* $q(z | context, target)$ to approximate the respective $p(z | context, target)$
+* $q(z | \text {context})$ to approximate the conditional prior $p(z | \text {context})$
+* $q(z | \text {context}, \text {target})$ to approximate the respective $p(z | \text {context}, \text {target})$
 where we have denoted $\text {context} := (x\_{1:C}, y\_{1:C})$ and $\text {target} := (x\_{1:T}, y\_{1:T})$. 
 
 The approximate posterior $q(z | \cdot)$ is chosen to have the specific form as illustrated in the inference model diagram below. That is, we use the same $h$ to map both the context set as well as the target set to obtain the aggregated $r$, which in turn is mapped to $\mu_z$ and $\sigma_z$. These parametrise the approximate posterior $q(z | \cdot) = \mathcal{N}(\mu_z, \sigma_z)$. 
@@ -82,7 +82,7 @@ The variational lower bound
 
 $$\text {ELBO} = \mathbb{E}\_{q(z | \text {context}, \text {target})} \left\[ \sum\_{t=1}^T \log p(y_t^{\ast} | z, x_t^{\ast}) + \log \frac{q(z | \text {context})}{q(z | \text {context}, \text {target})} \right\]$$
 
-contains two terms. The first is the expected log-likelihood over the target set. This is evaluated by sampling $z \sim q(z | context, target)$, as indicated on the left part of the inference diagram, and then using these $z$ values for predictions on the target set. The second term has a regularising effect -- it is the negative KL divergence between $q(z | \text {context}, \text {target})$ and $q(z | \text {context})$. Note that this differs slightly from the most commonly encountered variational inference setup with $\text{KL}(q || p)$, where $p$ would be the prior $p(z)$. This is because in our generative model, we have specified a conditional prior $p(z | \text {context})$ instead of directly specifying $p(z)$. As this conditional prior depends on $h$, we do not have access to the exact posterior and instead need to use an approximate $q(z | \text {context})$.
+contains two terms. The first is the expected log-likelihood over the target set. This is evaluated by sampling $z \sim q(z | \text {context}, \text {target})$, as indicated on the left part of the inference diagram, and then using these $z$ values for predictions on the target set. The second term has a regularising effect -- it is the negative KL divergence between $q(z | \text {context}, \text {target})$ and $q(z | \text {context})$. Note that this differs slightly from the most commonly encountered variational inference setup with $\text{KL}(q || p)$, where $p$ would be the prior $p(z)$. This is because in our generative model, we have specified a conditional prior $p(z | \text {context})$ instead of directly specifying $p(z)$. As this conditional prior depends on $h$, we do not have access to the exact posterior and instead need to use an approximate $q(z | \text {context})$.
 
 ### Experiments
 
