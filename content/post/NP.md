@@ -80,7 +80,7 @@ The approximate posterior $q(z | \cdot)$ is chosen to have the specific form as 
 
 The variational lower bound 
 
-$$ELBO = \mathbb{E}\_{q(z | \text {context}, \text {target})} \left\[ \sum\_{t=1}^T \log p(y_t^{\ast} | z, x_t^{\ast}) + \log \frac{q(z | \text {context})}{q(z | \text {context}, \text {target})} \right\]$$
+$$\text {ELBO} = \mathbb{E}\_{q(z | \text {context}, \text {target})} \left\[ \sum\_{t=1}^T \log p(y_t^{\ast} | z, x_t^{\ast}) + \log \frac{q(z | \text {context})}{q(z | \text {context}, \text {target})} \right\]$$
 
 contains two terms. The first is the expected log-likelihood over the target set. This is evaluated by sampling $z \sim q(z | context, target)$, as indicated on the left part of the inference diagram, and then using these $z$ values for predictions on the target set. The second term has a regularising effect -- it is the negative KL divergence between $q(z | \text {context}, \text {target})$ and $q(z | \text {context})$. Note that this differs slightly from the most commonly encountered variational inference setup with $\text{KL}(q || p)$, where $p$ would be the prior $p(z)$. This is because in our generative model, we have specified a conditional prior $p(z | \text {context})$ instead of directly specifying $p(z)$. As this conditional prior depends on $h$, we do not have access to the exact posterior and instead need to use an approximate $q(z | \text {context})$.
 
@@ -149,12 +149,29 @@ Note that above we did not use any context set at prediction time, but simply pr
 Taking the context set to be the point $(0, 0)$, shown on the left, will result in quite a broad posterior which looks quite nice, covering functions which resemble $a \sin(x)$ for a certain range of values of $a$ (but note that not for all $a \in [-2, 2]$ it was trained on). 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment2_pred.png)
 
-Adding a second context point $(1, \sin(1))$ will result in the posterior shown in the middle. The posterior has changed compared to the previous plot, e.g. functions with a negative values of $a$ are not included any more, but none of the functions goes through the given point. When increasing the number of context points which follow $1.0 \sin(x)$ then the NP posterior will become reasonably close to the true underlying function, as shown on the right. 
+Adding a second context point $(1, \sin(1))$ will result in the posterior shown in the middle. The posterior has changed compared to the previous plot, e.g. functions with a negative values of $a$ are not included any more, but none of the functions goes through the given point. When increasing the number of context points which follow $f(x) = 1.0 \sin(x)$ then the NP posterior will become reasonably close to the true underlying function, as shown on the right. 
 
 Now lets explore how well the trained NP will generalise beyond the class of functions it was trained on. Specifically, lets explore how it will generalise to the following functions $2.5 \sin(x)$ and $| \sin(x) |$. The first requires some extrapolation from the training data. The second one has a similar shape to the functions in training set but unlike the rest its values are non-negative. 
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment2_misspecification.png)
 
-As seen from the plots, the NP has not been able to generalise beyond the training data. In both scenarios, the model behaviour is somewhat expected (e.g. on the left, $a=2$ corresponds to the best fit within the class of functions the model has seen). However, note that there is not much uncertainty in the NP predictive distributions, so the model is quite confident in its predictions. 
+As seen from the plots, the NP has not been able to generalise beyond what it had seen during training. In both cases, the model behaviour is somewhat expected (e.g. on the left, $a=2$ corresponds to the best fit within the class of functions the model has seen). However, note that there is not much uncertainty in the NP predictive distributions. Of course over-confident predictions are not specific to NPs, however their black-box nature may make them more difficult to diagnose, compared to more interpretable models. 
 
+#### Training NPs on functions drawn from GPs
+
+Based on experiments so far, it seems that NPs are not out-of-the-box replacements for GPs, as the latter have more desirable properties regarding posterior uncertainty. In order to achieve a similar behaviour with an NP, we could train it using a large number of draws from a GP prior. We could do it as follows:
+
+* Draw $f \sim \mathcal{GP}(0, k_{\theta}(\cdot))$
+* Draw $x_i \sim U(-3, 3)$
+* Define $y_i := f(x_i)$
+* Divide pairs $(x_i, y_i)$ randomly into context and target sets and perform an optimisation step
+* Repeat
+
+The above procedure can be carried out with fixed kernel hyperparameters $\theta$ or a mixture of different values. The RBF (or squared exponential) kernel has two parameters: one controls the variance (essentially the range of function values) and the other “wigglyness”. The latter is called the lengthscale parameter and its effect is illustrated here, by drawing functions from the GP prior with lengthscale values in $\\{1, 2, 3\\}$:
+
+![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/GP_draws.png)
+
+To cover a variety of functions in the NP training, we could specify a prior $p(\theta)$ where to draw samples from. In this toy experiment, I varied lengthscale, as above, uniformly in $\\{1, 2, 3\\}$. As previously, choosing the latent $z$-space to be 2D, we can visualise what the NP has learned: 
+
+![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment3.gif)
 
