@@ -113,12 +113,13 @@ The animation below illustrates the transition from the NP prior to the posterio
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment1.gif)
 
-So the NP seems to have successfully learned a distribution over mappings which go through all of our five points. Now lets explore how well it generalises to other mappings, i.e. what happens if we use this trained NP for prediction on a different context set. Here is the posterior when conditioning on the blue points instead:
+So the NP seems to have successfully learned a distribution over mappings which go through all of our five points. Now lets explore how well it generalises to other mappings, i.e. what happens if we use this trained NP for prediction on a different context set. Here is the posterior when conditioning on the red points instead:
 
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment1.png)
 
 Not very surprisingly, the flexible NP model which was trained only on subsets of the five red points, doesn’t generalise to a different set of context points. To get a model which would generalise better, we could consider (pre)training the NP on a larger set of functions. 
+
 #### Training NPs on a small class of functions
 
 So far, we have explored the training scenario using a single (fixed) data set. To have an NP which would generalise similarly as GPs, it seems that we should train it on a much larger class of functions. But before that, lets explore how NPs behave in a simpler setting. That is, lets consider a toy scenario, where instead of a single function we observe a small class of functions. Specifically, lets consider all functions of the form $a \cdot \sin(x)$ where $a \in [-1, 1]$. 
