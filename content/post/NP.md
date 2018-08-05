@@ -38,7 +38,7 @@ The NP is a neural network based approach to represent a distribution over funct
 
 Given a set of observations $(x_i, y_i)$, they are split into two sets: "context points" and "target points". Given the pairs $(x_c, y_c)$ for $c = 1, …, C$ in the context set and given unseen inputs $x_t^{\ast}$ for $t = 1, …, T$ in the target set, our goal is to predict the corresponding function values $y_t^{\ast}$. We can think of NPs as if they were modelling the target set conditional on the context. Information flows from the context set (on the left) to making new predictions on the target set (on the right) via the latent space $z$. The latter is essentially a finite-dimensional embedding of mappings from x to y. The fact that $z$ is a random variable makes NP a probabilistic model and lets us capture uncertainty over functions. Once we have trained the model, we can use the (approximate) posterior distribution of $z$ to make predictions at test time. 
 
-At first sight, the split into context and target sets may look like the standard train and test split of the data, but this is not the case, as the target set is directly used in training the NP model -- our (probabilistic) loss function is explicitly defined over the target set. This will allow the model to avoid overfitting and achieve better out-of-sample generalisation. In practice, we would repeatedly split out training data into randomly chosen context and target sets to obtain good generalisation. 
+At first sight, the split into context and target sets may look like the standard train and test split of the data, but this is not the case, as the target set is directly used in training the NP model -- our (probabilistic) loss function is explicitly defined over the target set. This will allow the model to avoid overfitting and achieve better out-of-sample generalisation. In practice, we would repeatedly split our training data into randomly chosen context and target sets to obtain good generalisation. 
 
 Let us consider two scenarios: 
 
@@ -89,7 +89,7 @@ contains two terms. The first is the expected log-likelihood over the target set
 
 #### NP as a prior over functions
 
-Lets start by exploring the behaviour of NPs as a prior over functions, i.e. in the setting where we haven’t observed any data and haven’t yet trained the model. Having initialised the weights (here I initialised them independently from a standard normal), we can sample $z \sim \mathcal{N}(0, I)$ and generate from the (prior) predictive distribution over a grid of $x^{\ast}$ values to plot the functions. 
+Let's start by exploring the behaviour of NPs as a prior over functions, i.e. in the setting where we haven’t observed any data and haven’t yet trained the model. Having initialised the weights (here I initialised them independently from a standard normal), we can sample $z \sim \mathcal{N}(0, I)$ and generate from the (prior) predictive distribution over a grid of $x^{\ast}$ values to plot the functions. 
 
 As opposed to GPs which have interpretable kernel hyperparameters, the NP prior is much less explicit. There are various architectural choices involved (such as how many hidden layers to use, what activation functions to use etc) which all implicitly affect our prior distribution over the function space. You can see the specific architectural choices behind my experiments in [github.com/kasparmartens/NeuralProcesses](https://github.com/kasparmartens/NeuralProcesses). 
 
@@ -113,7 +113,7 @@ The animation below illustrates the transition from the NP prior to the posterio
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment1.gif)
 
-So the NP seems to have successfully learned a distribution over mappings which go through all of our five points. Now lets explore how well it generalises to other mappings, i.e. what happens if we use this trained NP for prediction on a different context set. Here is the posterior when conditioning on the red points instead:
+So the NP seems to have successfully learned a distribution over mappings which go through all of our five points. Now let's explore how well it generalises to other mappings, i.e. what happens if we use this trained NP for prediction on a different context set. Here is the posterior when conditioning on the red points instead:
 
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment1.png)
@@ -122,14 +122,16 @@ Not very surprisingly, the flexible NP model which was trained only on subsets o
 
 #### Training NPs on a small class of functions
 
-So far, we have explored the training scenario using a single (fixed) data set. To have an NP which would generalise similarly as GPs, it seems that we should train it on a much larger class of functions. But before that, lets explore how NPs behave in a simpler setting. That is, lets consider a toy scenario, where instead of a single function we observe a small class of functions. Specifically, lets consider all functions of the form $a \cdot \sin(x)$ where $a \in [-1, 1]$. 
+So far, we have explored the training scenario using a single (fixed) data set. To have an NP which would generalise similarly to GPs, it seems that we should train it on a much larger class of functions. But before that, let's explore how NPs behave in a simpler setting. 
+
+That is, let's consider a toy scenario, where instead of a single function we observe a small class of functions. Specifically, let's consider all functions of the form $a \cdot \sin(x)$ where $a \in [-1, 1]$. 
 
 It would be interesting to see:
 
 1. Is the NP able to capture this class of functions
 2. Will it generalise beyond this class of functions
 
-Lets use the following training procedure:
+Let's use the following training procedure:
 
 * Draw $a$ uniformly $a \sim U(-2, 2)$
 * Draw $x_i \sim U(-3, 3)$
@@ -145,14 +147,14 @@ It seems that the direction from left-to-right essentially encodes our parameter
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment2.gif)
 
-Note that above we did not use any context set at prediction time, but simply pre-specified various $(z_1, z_2)$ values. Now lets look into using this trained model for predicting. 
+Note that above we did not use any context set at prediction time, but simply pre-specified various $(z_1, z_2)$ values. Now let's look into using this trained model for predicting. 
 
 Taking the context set to be the point $(0, 0)$, shown on the left, will result in quite a broad posterior which looks quite nice, covering functions which resemble $a \sin(x)$ for a certain range of values of $a$ (but note that not for all $a \in [-2, 2]$ it was trained on). 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment2_pred.png)
 
 Adding a second context point $(1, \sin(1))$ will result in the posterior shown in the middle. The posterior has changed compared to the previous plot, e.g. functions with a negative values of $a$ are not included any more, but none of the functions goes through the given point. When increasing the number of context points which follow $f(x) = 1.0 \sin(x)$ then the NP posterior will become reasonably close to the true underlying function, as shown on the right. 
 
-Now lets explore how well the trained NP will generalise beyond the class of functions it was trained on. Specifically, lets explore how it will generalise to the following functions $2.5 \sin(x)$ and $| \sin(x) |$. The first requires some extrapolation from the training data. The second one has a similar shape to the functions in training set but unlike the rest its values are non-negative. 
+Now let's explore how well the trained NP will generalise beyond the class of functions it was trained on. Specifically, let's explore how it will generalise to the following functions $2.5 \sin(x)$ and $| \sin(x) |$. The first requires some extrapolation from the training data. The second one has a similar shape to the functions in training set but unlike the rest its values are non-negative. 
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment2_misspecification.png)
 
