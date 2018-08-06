@@ -75,7 +75,7 @@ Inference for the NP is carried out in the variational inference framework. Spec
 
 * $q(z | \text {context})$ to approximate the conditional prior $p(z | \text {context})$
 * $q(z | \text {context}, \text {target})$ to approximate the respective $p(z | \text {context}, \text {target})$
-where we have denoted $\text {context} := (x\_{1:C}, y\_{1:C})$ and $\text {target} := (x\_{1:T}, y\_{1:T})$. 
+where we have denoted $\text {context} := (x\_{1:C}, y\_{1:C})$ and $\text {target} := (x\_{1:T}^{\ast}, y\_{1:T}^{\ast})$. 
 
 The approximate posterior $q(z | \cdot)$ is chosen to have the specific form as illustrated in the inference model diagram below. That is, we use the same $h$ to map both the context set as well as the target set to obtain the aggregated $r$, which in turn is mapped to $\mu_z$ and $\sigma_z$. These parametrise the approximate posterior $q(z | \cdot) = \mathcal{N}(\mu_z, \sigma_z)$. 
 
