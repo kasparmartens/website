@@ -23,12 +23,14 @@ In this year’s ICML, some interesting work was presented on Neural Processes. 
 
 Neural Processes (NPs) caught my attention as they essentially are a neural network (NN) based probabilistic model which can represent a distribution over stochastic processes. So NPs combine elements from two worlds: 
 
-* Deep Learning -- a neural network is a flexible non-linear function which is straightforward to train
+* Deep Learning -- neural networks are flexible non-linear functions which are straightforward to train
 * Gaussian Processes -- GPs offer a probabilistic framework for learning a distribution over a wide class of non-linear functions
 
-Both have their advantages and drawbacks. In the limited data regime, GPs are preferable due to their probabilistic nature and ability to capture uncertainty. This differs from (non-Bayesian) NNs which represent a single function rather than a distribution over functions. However the latter might be preferable in the presence of large amounts of data as training NNs is computationally much more scalable than inference for GPs. Neural Processes aim to combine the best of these two worlds. 
+Both have their advantages and drawbacks. In the limited data regime, GPs are preferable due to their probabilistic nature and ability to capture uncertainty. This differs from (non-Bayesian) neural networks which represent a single function rather than a distribution over functions. However the latter might be preferable in the presence of large amounts of data as training NNs is computationally much more scalable than inference for GPs. Neural Processes aim to combine the best of these two worlds. 
 
 I found the idea behind NPs interesting, but I felt I was lacking intuition and a deeper understanding how NPs behave as a prior over functions. I believe, often the best way towards understanding something is implementing it, empirically trying it out on simple problems, and finally explaining this to someone else. So here is my attempt at reviewing and discussing NPs. 
+
+Before reading my post, I recommend the reader to take a look at both original papers. Even though here I discuss [[NPs]](https://arxiv.org/abs/1807.01622), you might find it easier to start with [[conditional NPs]](https://arxiv.org/abs/1807.01613) which are essentially a non-probabilistic version of NPs. 
 
 ### What is a Neural Process?
 
@@ -82,18 +84,18 @@ The variational lower bound
 
 $$\text {ELBO} = \mathbb{E}\_{q(z | \text {context}, \text {target})} \left\[ \sum\_{t=1}^T \log p(y_t^{\ast} | z, x_t^{\ast}) + \log \frac{q(z | \text {context})}{q(z | \text {context}, \text {target})} \right\]$$
 
-contains two terms. The first is the expected log-likelihood over the target set. This is evaluated by sampling $z \sim q(z | \text {context}, \text {target})$, as indicated on the left part of the inference diagram, and then using these $z$ values for predictions on the target set. The second term has a regularising effect -- it is the negative KL divergence between $q(z | \text {context}, \text {target})$ and $q(z | \text {context})$. Note that this differs slightly from the most commonly encountered variational inference setup with $\text{KL}(q || p)$, where $p$ would be the prior $p(z)$. This is because in our generative model, we have specified a conditional prior $p(z | \text {context})$ instead of directly specifying $p(z)$. As this conditional prior depends on $h$, we do not have access to the exact posterior and instead need to use an approximate $q(z | \text {context})$.
+contains two terms. The first is the expected log-likelihood over the target set. This is evaluated by first sampling $z \sim q(z | \text {context}, \text {target})$, as indicated on the left part of the inference diagram, and then using these $z$ values for predictions on the target set, as on the right part of the diagram. The second term in ELBO has a regularising effect -- it is the negative KL divergence between $q(z | \text {context}, \text {target})$ and $q(z | \text {context})$. Note that this differs slightly from the most commonly encountered variational inference setup with $\text{KL}(q || p)$, where $p$ would be the prior $p(z)$. This is because in our generative model, we have specified a conditional prior $p(z | \text {context})$ instead of directly specifying $p(z)$. As this conditional prior depends on $h$, we do not have access to its exact value and instead need to use an approximate $q(z | \text {context})$.
 
 ### Experiments
 
 
 #### NP as a prior over functions
 
-Let's start by exploring the behaviour of NPs as a prior over functions, i.e. in the setting where we haven’t observed any data and haven’t yet trained the model. Having initialised the weights (here I initialised them independently from a standard normal), we can sample $z \sim \mathcal{N}(0, I)$ and generate from the (prior) predictive distribution over a grid of $x^{\ast}$ values to plot the functions. 
+Let's start by exploring the behaviour of NPs as a prior over functions, i.e. in the setting where we haven’t observed any data and haven’t yet trained the model. Having initialised the weights (here I initialised them independently from a standard normal), we can sample $z \sim \mathcal{N}(0, I)$ and generate from the (prior) predictive distribution over a grid of $x^{\ast}$ values to plot the functions.
 
 As opposed to GPs which have interpretable kernel hyperparameters, the NP prior is much less explicit. There are various architectural choices involved (such as how many hidden layers to use, what activation functions to use etc) which all implicitly affect our prior distribution over the function space. You can see the specific architectural choices behind my experiments in [github.com/kasparmartens/NeuralProcesses](https://github.com/kasparmartens/NeuralProcesses). 
 
-For example, when using sigmoid activations and varying the dimensionality of $z$ in $\\{1, 2, 4, 8\\}$, typical draws from the NP prior look as follows:
+For example, when using sigmoid activations and varying the dimensionality of $z$ in $\\{1, 2, 4, 8\\}$, typical draws from the (randomly initialised) NP prior may look as follows:
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/draws_from_prior.png)
 
@@ -118,7 +120,7 @@ So the NP seems to have successfully learned a distribution over mappings which 
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment1.png)
 
-Not very surprisingly, the flexible NP model which was trained only on subsets of the five red points, doesn’t generalise to a different set of context points. To get a model which would generalise better, we could consider (pre)training the NP on a larger set of functions. 
+Not very surprisingly, the flexible NP model which was trained only on subsets of the five blue points, doesn’t generalise to a different set of context points. To get a model which would generalise better, we could consider (pre)training the NP on a larger set of functions. 
 
 #### Training NPs on a small class of functions
 
@@ -178,3 +180,31 @@ To cover a variety of functions in the NP training, we could specify a prior $p(
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment3.gif)
 
+This looks pretty cool! In this two-dimensional $z$ space that the NP has learned, we can smoothly interpolate between different functions. 
+
+Now let's explore the predictions we get using this NP, and let's see how its behaviour compares to a Gaussian Process posterior. Using an increasing number of context points $\\{3, 5, 11\\}$, let's consider two functions: 
+
+First, using a relatively smooth function $f(x) = \sin(0.5x)$, the predictions look as follows:
+
+![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment3_pred2.png)
+
+Second, let's consider $f(x) = \sin(1.5x)$: 
+
+![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment3_pred1.png)
+
+In the first case, the NP predictions follow the observations quite closely, whereas in the second case, with three observations it looks good, but when given more points it hasn't been able to capture the pattern. I can hypothesize that this may be due to various reasons: 
+
+* using only a 2D space might be quite restrictive in what we are able to learn, we could consider using a higher-dimensional $z$ 
+* using a larger number of hidden units in NNs $g$ and $h$
+* observing a larger number of function draws in the training phase might improve generalisation 
+* observing a larger variety of functions (i.e. more variability in GP kernel hyperparameters) during training 
+
+These might all lead to behaviour which would resemble GPs more closely. 
+
+### Conclusions
+
+Even though Neural Processes combine elements from both NNs and GP-like Bayesian models to capture distributions over functions, on this spectrum NPs lie closer to neural models. By making careful choices regarding the neural architectures as well as the training procedure for NPs, it is possible achieve desirable model behaviour, e.g. GP-like predictive uncertainties. However these effects are mostly implicit which make NPs more challenging to interpret as a prior. 
+
+### Implementation
+
+My implementation using TensorFlow in R together with code for the experiments above is available in [github.com/kasparmartens/NeuralProcesses](https://github.com/kasparmartens/NeuralProcesses). 
