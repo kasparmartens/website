@@ -15,6 +15,7 @@ summary = "What are Neural Processes and how they behave as a distribution over 
 [header]
 image = ""
 caption = ""
+image_preview = "NP_cover.gif"
 
 
 +++
