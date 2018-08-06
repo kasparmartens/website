@@ -1,8 +1,8 @@
 +++
 title = "Neural Processes as distributions over functions"
 
-date = 2018-08-02T00:00:00
-lastmod = 2018-08-02T00:00:00
+date = 2018-08-07T00:00:00
+lastmod = 2018-08-07T00:00:00
 draft = false
 math = true
 
