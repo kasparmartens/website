@@ -181,7 +181,7 @@ To cover a variety of functions in the NP training, we could specify a prior $p(
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment3.gif)
 
-This looks pretty cool! In this two-dimensional $z$ space that the NP has learned, we can smoothly interpolate between different functions. 
+This looks pretty cool! The NP has learned the two-dimensional $z$ space where we can smoothly interpolate between different functions. 
 
 Now let's explore the predictions we get using this NP, and let's see how its behaviour compares to a Gaussian Process posterior. Using an increasing number of context points $\\{3, 5, 11\\}$, let's consider two functions: 
 
@@ -193,13 +193,13 @@ Second, let's consider $f(x) = \sin(1.5x)$:
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment3_pred1.png)
 
-In the first case, the NP predictions follow the observations quite closely, whereas in the second case, with three observations it looks good, but when given more points it hasn't been able to capture the pattern. I can hypothesize that this may be due to various reasons: 
+In the first case, the NP predictions follow the observations quite closely, whereas in the second case, with three observations it looks good, but when given more points it hasn't been able to capture the pattern. 
+I can hypothesize that there are ways how we could improve the model behaviour, so that it would resemble GPs more closely:
 
 * Using only a 2D space might be quite restrictive in what we are able to learn, we could consider using a higher-dimensional $z$. 
 * We could consider using a larger number of hidden units in NNs $g$ and $h$. 
 * Observing a larger number of function draws as well as a larger variety of functions (i.e. more variability in GP kernel hyperparameters) during the training phase could lead to better generalisation. 
 
-These might all lead to behaviour which would resemble GPs more closely. 
 
 ### Conclusions
 
