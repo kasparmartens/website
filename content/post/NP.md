@@ -194,10 +194,9 @@ Second, let's consider $f(x) = \sin(1.5x)$:
 
 In the first case, the NP predictions follow the observations quite closely, whereas in the second case, with three observations it looks good, but when given more points it hasn't been able to capture the pattern. I can hypothesize that this may be due to various reasons: 
 
-* using only a 2D space might be quite restrictive in what we are able to learn, we could consider using a higher-dimensional $z$ 
-* using a larger number of hidden units in NNs $g$ and $h$
-* observing a larger number of function draws in the training phase might improve generalisation 
-* observing a larger variety of functions (i.e. more variability in GP kernel hyperparameters) during training 
+* Using only a 2D space might be quite restrictive in what we are able to learn, we could consider using a higher-dimensional $z$. 
+* We could consider using a larger number of hidden units in NNs $g$ and $h$. 
+* Observing a larger number of function draws as well as a larger variety of functions (i.e. more variability in GP kernel hyperparameters) during the training phase could lead to better generalisation. 
 
 These might all lead to behaviour which would resemble GPs more closely. 
 
@@ -207,4 +206,4 @@ Even though Neural Processes combine elements from both NNs and GP-like Bayesian
 
 ### Implementation
 
-My implementation using TensorFlow in R together with code for the experiments above is available in [github.com/kasparmartens/NeuralProcesses](https://github.com/kasparmartens/NeuralProcesses). 
+My implementation using TensorFlow in R (together with code for the experiments above) is available in [github.com/kasparmartens/NeuralProcesses](https://github.com/kasparmartens/NeuralProcesses). 
