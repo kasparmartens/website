@@ -1,8 +1,8 @@
 +++
 title = "Neural Processes as distributions over functions"
 
-date = 2018-08-06T00:00:00
-lastmod = 2018-08-06T00:00:00
+date = 2018-08-07T00:00:00
+lastmod = 2018-08-07T00:00:00
 draft = false
 math = true
 
@@ -10,7 +10,7 @@ math = true
 authors = []
 
 tags = []
-summary = "What are Neural Processes and how they behave as a distribution over functions?"
+summary = "What are Neural Processes and how they behave as distributions over functions?"
 
 [header]
 image = ""
@@ -39,7 +39,7 @@ The NP is a neural network based approach to represent a distribution over funct
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/schema1.png)
 
-Given a set of observations $(x_i, y_i)$, they are split into two sets: "context points" and "target points". Given the pairs $(x_c, y_c)$ for $c = 1, …, C$ in the context set and given unseen inputs $x_t^{\ast}$ for $t = 1, …, T$ in the target set, our goal is to predict the corresponding function values $y_t^{\ast}$. We can think of NPs as if they were modelling the target set conditional on the context. Information flows from the context set (on the left) to making new predictions on the target set (on the right) via the latent space $z$. The latter is essentially a finite-dimensional embedding of mappings from x to y. The fact that $z$ is a random variable makes NP a probabilistic model and lets us capture uncertainty over functions. Once we have trained the model, we can use the (approximate) posterior distribution of $z$ to make predictions at test time. 
+Given a set of observations $(x_i, y_i)$, they are split into two sets: "context points" and "target points". Given the pairs $(x_c, y_c)$ for $c = 1, …, C$ in the context set and given unseen inputs $x_t^{\ast}$ for $t = 1, …, T$ in the target set, our goal is to predict the corresponding function values $y_t^{\ast}$. We can think of NPs as if they were modelling the target set conditional on the context. Information flows from the context set (on the left) to making new predictions on the target set (on the right) via the latent space $z$. The latter is essentially a finite-dimensional embedding of mappings from x to y. The fact that $z$ is a random variable makes NP a probabilistic model and lets us capture uncertainty over functions. Once we have trained the model, we can use our (approximate) posterior distribution of $z$ as a prior to make predictions at test time. 
 
 At first sight, the split into context and target sets may look like the standard train and test split of the data, but this is not the case, as the target set is directly used in training the NP model -- our (probabilistic) loss function is explicitly defined over the target set. This will allow the model to avoid overfitting and achieve better out-of-sample generalisation. In practice, we would repeatedly split our training data into randomly chosen context and target sets to obtain good generalisation. 
 
@@ -54,7 +54,7 @@ The first scenario corresponds to a standard (probabilistic) supervised learning
 
 The second scenario can be seen from the meta-learning viewpoint. Given $D$ data sets $d = 1, …, D$, each consisting of $N_d$ pairs $(x_i^{(d)}, y_i^{(d)})$, if we assume that every data set $d = 1, …, D$ has its own underlying function $f_d$ which has generated the values $y_i = f_d(x_i)$, we might want to learn the posterior of every $f_d$ as well as generalise to a new data set $d^{\ast}$. The latter is especially useful when every data set has only a small number of observations. This information sharing is achieved by specifying that there exists a shared process which underlies all functions $f_d$. For example, in the context of GPs, one can assume that $f_d \sim \mathcal{GP}$ share kernel hyperparameters. Having learned the shared process, when given a new data set $d^{\ast}$, one can use the posterior over functions as a prior and carry out few-shot function regression. 
 
-The reason I wanted to highlight these two scenarios is the following: Usually, in the most standard setting, GP-regression is carried out under the first scenario. This tends to work well even when $N$ is small. However, the motivation behind NPs seems to be mainly coming from the meta-learning setup -- in this setting the latent $z$ can be thought of as a mechanism to share information across different data sets. Nevertheless, having elements of a probabilistic model, NPs should be applicable in both scenarios. Below we will investigate how NPs behave when trained only on a single data set, as well as the second setup where we have access to a large number of function draws in order to train the NP. 
+The reason I wanted to highlight these two scenarios is the following. Usually, in the most standard setting, GP-regression is carried out under the first scenario. This tends to work well even when $N$ is small. However, the motivation behind NPs seems to be mainly coming from the meta-learning setup -- in this setting the latent $z$ can be thought of as a mechanism to share information across different data sets. Nevertheless, having elements of a probabilistic model, NPs should be applicable in both scenarios. Below we will investigate how NPs behave when trained only on a single data set, as well as the second setup where we have access to a large number of function draws in order to train the NP. 
 
 ### How are NPs implemented?
 
