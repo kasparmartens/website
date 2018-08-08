@@ -1,8 +1,8 @@
 +++
 title = "Neural Processes as distributions over functions"
 
-date = 2018-08-08T00:00:00
-lastmod = 2018-08-08T00:00:00
+date = 2018-08-09T00:00:00
+lastmod = 2018-08-09T00:00:00
 draft = false
 math = true
 
@@ -200,7 +200,8 @@ This effect is quite likely due to our architectural choices to use quite small 
 * We could consider using a larger number of hidden units in NNs $g$ and $h$, and consider making them deep. 
 * Observing a larger number of function draws as well as a larger variety of functions (i.e. more variability in GP kernel hyperparameters) during the training phase could lead to better generalisation. 
 
-For example, having increased $\text {dim}( r )$ to 32 and $\text {dim}(z)$ to 4 together with a larger number of hidden units in $g$ and $h$, we can obtain a much nicer behaviour:
+Such changes can indeed lead to more desirable results. 
+For example, having increased $\text {dim}( r )$ to 32 and $\text {dim}(z)$ to 4 together with a larger number of hidden units in $g$ and $h$, we observe much nicer behaviour:
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment4.png)
 
