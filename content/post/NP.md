@@ -1,8 +1,8 @@
 +++
 title = "Neural Processes as distributions over functions"
 
-date = 2018-08-07T00:00:00
-lastmod = 2018-08-07T00:00:00
+date = 2018-08-08T00:00:00
+lastmod = 2018-08-08T00:00:00
 draft = false
 math = true
 
@@ -10,7 +10,7 @@ math = true
 authors = []
 
 tags = []
-summary = "What are Neural Processes and how they behave as distributions over functions?"
+summary = "In this year’s ICML, some interesting work was presented on Neural Processes. In this blog post, I discuss what Neural Processes are and how they behave as a prior over functions."
 
 [header]
 image = ""
@@ -94,7 +94,7 @@ contains two terms. The first is the expected log-likelihood over the target set
 
 Let's start by exploring the behaviour of NPs as a prior over functions, i.e. in the setting where we haven’t observed any data and haven’t yet trained the model. Having initialised the weights (here I initialised them independently from a standard normal), we can sample $z \sim \mathcal{N}(0, I)$ and generate from the (prior) predictive distribution over a grid of $x^{\ast}$ values to plot the functions.
 
-As opposed to GPs which have interpretable kernel hyperparameters, the NP prior is much less explicit. There are various architectural choices involved (such as how many hidden layers to use, what activation functions to use etc) which all implicitly affect our prior distribution over the function space. You can see the specific architectural choices behind my experiments in [github.com/kasparmartens/NeuralProcesses](https://github.com/kasparmartens/NeuralProcesses). 
+As opposed to GPs which have interpretable kernel hyperparameters, the NP prior is much less explicit. There are various architectural choices involved (such as how many hidden layers to use, what activation functions to use etc) which all implicitly affect our prior distribution over the function space. 
 
 For example, when using sigmoid activations and varying the dimensionality of $z$ in $\\{1, 2, 4, 8\\}$, typical draws from the (randomly initialised) NP prior may look as follows:
 
@@ -194,11 +194,15 @@ Second, let's consider $f(x) = \sin(1.5x)$:
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment3_pred1.png)
 
 In the first case, the NP predictions follow the observations quite closely, whereas in the second case, with three observations it looks good, but when given more points it hasn't been able to capture the pattern. 
-I can hypothesize that there are ways how we could improve the model behaviour, so that it would resemble GPs more closely:
+This effect is quite likely due to our architectural choices to use quite small NNs and a low-dimensional $z$. In order to improve the model behaviour so that it would resemble GPs more closely, we could consider applying the following changes: 
 
-* Using only a 2D space might be quite restrictive in what we are able to learn, we could consider using a higher-dimensional $z$. 
-* We could consider using a larger number of hidden units in NNs $g$ and $h$. 
+* Using only a 2D $z$-space might be quite restrictive in what we are able to learn, we could consider using a higher-dimensional $z$. Similarly for $r$. 
+* We could consider using a larger number of hidden units in NNs $g$ and $h$, and consider making them deep. 
 * Observing a larger number of function draws as well as a larger variety of functions (i.e. more variability in GP kernel hyperparameters) during the training phase could lead to better generalisation. 
+
+For example, having increased $\text {dim}( r )$ to 32 and $\text {dim}(z)$ to 4 together with a larger number of hidden units in $g$ and $h$, we can obtain a much nicer behaviour:
+
+![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment4.png)
 
 
 ### Conclusions
