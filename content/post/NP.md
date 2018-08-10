@@ -223,5 +223,5 @@ I would like to thank Hyunjik Kim for clarifying my understanding of the NP pape
 <meta name="twitter:site" content="@kasparmartens" />
 <meta name="twitter:title" content="Neural Processes" />
 <meta name="twitter:description" content="In this year’s ICML, some interesting work was presented on Neural Processes. In this blog post, I discuss what are Neural Processes and how they behave as a prior over functions." />
-<meta name="twitter:image" content="https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment3.gif"
+<meta name="twitter:image" content="https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment3_1.gif"
 </div>
