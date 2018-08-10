@@ -1,8 +1,8 @@
 +++
 title = "Neural Processes as distributions over functions"
 
-date = 2018-08-08T00:00:00
-lastmod = 2018-08-08T00:00:00
+date = 2018-08-10T00:00:00
+lastmod = 2018-08-10T00:00:00
 draft = false
 math = true
 
@@ -92,7 +92,7 @@ contains two terms. The first is the expected log-likelihood over the target set
 
 #### NP as a prior over functions
 
-Let's start by exploring the behaviour of NPs as a prior over functions, i.e. in the setting where we haven’t observed any data and haven’t yet trained the model. Having initialised the weights (here I initialised them independently from a standard normal), we can sample $z \sim \mathcal{N}(0, I)$ and generate from the (prior) predictive distribution over a grid of $x^{\ast}$ values to plot the functions.
+Let's start by exploring the behaviour of NPs as a prior over functions, i.e. in the setting where we haven’t observed any data and haven’t yet trained the model. Having initialised the weights (here I initialised them independently from a standard normal), we can sample $z \sim \mathcal{N}(0, I)$ and generate from the prior predictive distribution over a grid of $x^{\ast}$ values to plot the functions.
 
 As opposed to GPs which have interpretable kernel hyperparameters, the NP prior is much less explicit. There are various architectural choices involved (such as how many hidden layers to use, what activation functions to use etc) which all implicitly affect our prior distribution over the function space. 
 
@@ -100,19 +100,19 @@ For example, when using sigmoid activations and varying the dimensionality of $z
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/draws_from_prior.png)
 
-But when deciding to use the ReLu activations instead, we have placed the prior probability mass over a different set of functions: 
+But when deciding to use the ReLU activations instead, we have placed the prior probability mass over a different set of functions: 
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/draws_from_prior_relu.png)
 
-#### From the prior to the posterior: Training NP on a small data set
+#### Training NP on a small data set
 
 Suppose all we have is the following five data points: 
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/observed_data.png)
 
 The training procedure for NPs will involve separating the context set and target set. One option is to use a fixed size context set, another is to cover a wider range of scenarios by training using varying context set sizes (e.g. at every iteration we could randomly draw the number of context points from the set $\\{1, 2, 3, 4\\}$). 
-Once we have trained the model on these random subsets, we condition on all of our data (i.e. we take all these five points to be the context points) and plot draws from the posterior. 
-The animation below illustrates the transition from the NP prior to the posterior over the training procedure:
+Once we have trained the model on these random subsets, we use the trained model as our prior and now condition on all of our data (i.e. we take all these five points to be the context points) and plot draws from the posterior. 
+The animation below illustrates how the predictive distribution of the NP changes as it is being trained:
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment1.gif)
 
@@ -196,24 +196,27 @@ Second, let's consider $f(x) = \sin(1.5x)$:
 In the first case, the NP predictions follow the observations quite closely, whereas in the second case, with three observations it looks good, but when given more points it hasn't been able to capture the pattern. 
 This effect is quite likely due to our architectural choices to use quite small NNs and a low-dimensional $z$. In order to improve the model behaviour so that it would resemble GPs more closely, we could consider applying the following changes: 
 
-* Using only a 2D $z$-space might be quite restrictive in what we are able to learn, we could consider using a higher-dimensional $z$. Similarly for $r$. 
-* We could consider using a larger number of hidden units in NNs $g$ and $h$, and consider making them deep. 
+* Using only a 2D $z$-space might be quite restrictive in what we are able to learn, we could consider using a higher-dimensional $z$. And similarly for $r$. 
+* We could consider using a larger number of hidden units in NNs $h$ and $g$, and consider making them deep. 
 * Observing a larger number of function draws as well as a larger variety of functions (i.e. more variability in GP kernel hyperparameters) during the training phase could lead to better generalisation. 
 
 Such changes can indeed lead to more desirable results. 
-For example, having increased $\text {dim}( r )$ to 32 and $\text {dim}(z)$ to 4 together with a larger number of hidden units in $g$ and $h$, we observe much nicer behaviour:
+For example, having increased $\text {dim}( r )$ to 32 and $\text {dim}(z)$ to 4 together with a larger number of hidden units in $h$ and $g$, we observe much nicer behaviour:
 
 ![](https://raw.githubusercontent.com/kasparmartens/NeuralProcesses/master/fig/experiment4.png)
 
 
 ### Conclusions
 
-Even though Neural Processes combine elements from both NNs and GP-like Bayesian models to capture distributions over functions, on this spectrum NPs lie closer to neural models. By making careful choices regarding the neural architectures as well as the training procedure for NPs, it is possible achieve desirable model behaviour, e.g. GP-like predictive uncertainties. However these effects are mostly implicit which make NPs more challenging to interpret as a prior. 
+Even though Neural Processes combine elements from both NNs and GP-like Bayesian models to capture distributions over functions, on this spectrum NPs lie closer to neural models. By making careful choices regarding the neural architectures as well as the training procedure for NPs, it is possible to achieve desirable model behaviour, e.g. GP-like predictive uncertainties. However, these effects are mostly implicit which make NPs more challenging to interpret as a prior. 
 
 ### Implementation
 
 My implementation using TensorFlow in R (together with code for the experiments above) is available in [github.com/kasparmartens/NeuralProcesses](https://github.com/kasparmartens/NeuralProcesses). 
 
+### Acknowledgements
+
+I would like to thank Hyunjik Kim for clarifying my understanding of the NP papers, Jin Xu for sharing his results on NPs (which stimulated me to think about more complex NNs), Tanel Pärnamaa and Leon Law for their comments, and Chris Yau for being an awesome supervisor. 
 
 <div>
 <meta name="twitter:card" content="summary" />
