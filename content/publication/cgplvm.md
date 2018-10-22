@@ -3,7 +3,7 @@ title = "Covariate Gaussian Process Latent Variable Models"
 date = "2018-08-01"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["K Märtens", "K Campbell", "C Holmes", "C Yau"]
+authors = ["K Märtens", "K Campbell", "C Yau"]
 
 # Publication type.
 # Legend:
@@ -17,13 +17,13 @@ authors = ["K Märtens", "K Campbell", "C Holmes", "C Yau"]
 publication_types = ["0"]
 
 # Publication name and optional abbreviated version.
-publication = "Soon to be released"
-publication_short = "Soon to be released"
+publication = "Preprint"
+publication_short = "Preprint"
 
 # Abstract and optional shortened version.
-abstract = "Dimensionality reduction is a key step towards gaining insights into complex high-dimensional data. Gaussian Process Latent Variable Models (GPLVMs) offer a principled way of performing probabilistic non-linear dimensionality reduction. However, often there is *a priori* known structure in the data in the form of covariate information or class labels. To obtain a low-dimensional representation which would capture patterns beyond what is induced by the covariates, we propose the covariate-GPLVM (c-GPLVM). This flexible model class lets us capture non-linear interactions between covariates and latent variables, while maintaining interpretability. Using various toy examples as well as disease progression modelling in cancer genomics, we demonstrate how c-GPLVM reveals meaningful latent structure which is shared across different class labels or covariate values."
+abstract = "Gaussian Process Regression (GPR) and Gaussian Process Latent Variable Models (GPLVM) offer a principled way of performing probabilistic non-linear regression and dimensionality reduction. In this paper we propose a hybrid between the two, the covariate-GPLVM (c-GPLVM), to perform dimensionality reduction in the presence of covariate information (e.g. continuous covariates, class labels, or censored survival times). This construction lets us adjust for covariate effects and reveals meaningful latent structure which is not revealed when using GPLVM. Furthermore, we introduce structured decomposable kernels which will let us interpret how the fixed and latent inputs contribute to feature-level variation, e.g. identify the presence of a non-linear interaction. We demonstrate the utility of this model on applications in disease progression modelling from high-dimensional gene expression data in the presence of additional phenotypes."
 
-abstract_short = "Dimensionality reduction is a key step towards gaining insights into complex high-dimensional data. However, real-life data often exhibits strong structure which is *a priori* known to us. This could be in the form of covariate information or class labels. Here, we propose the covariate-GPLVM to learn a covariate-adjusted low-dimensional representation which would reveal meaningful latent structure shared across different class labels or covariate values."
+abstract_short = "Dimensionality reduction is a key step towards gaining insights into complex high-dimensional data. However, real-life data often exhibits strong structure which is *a priori* known to us. This could be in various forms of covariate information (e.g. continuous measurements, class labels, or censored survival times). Here, we propose the covariate-GPLVM to learn a covariate-adjusted low-dimensional representation which would reveal meaningful latent structure shared across different class labels or covariate values."
 
 # Featured image thumbnail (optional)
 image_preview = "cGPLVM_cover.png"
@@ -38,13 +38,13 @@ projects = []
 
 # Links (optional).
 # url_pdf = ""
-# url_preprint = "https://arxiv.org/abs/1703.08520"
-# url_code = "https://github.com/kasparmartens/ensembleFHMM"
+url_preprint = "https://arxiv.org/abs/1810.06983"
+# url_code = ""
 # url_dataset = "#"
 # url_project = "#"
 # url_slides = "#"
 # url_video = "#"
-# url_poster = "poster/ensemblemcmc_poster.pdf"
+# url_poster = ""
 # url_source = "#"
 
 # Custom links (optional).
