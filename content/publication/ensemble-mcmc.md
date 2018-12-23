@@ -1,6 +1,6 @@
 +++
 title = "Augmented Ensemble MCMC sampling in Factorial Hidden Markov Models"
-date = "2018-02-09"
+date = "2019-01-01"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["K Märtens", "MK Titsias", "C Yau"]
@@ -14,11 +14,11 @@ authors = ["K Märtens", "MK Titsias", "C Yau"]
 # 4 = Technical report
 # 5 = Book
 # 6 = Book chapter
-publication_types = ["0"]
+publication_types = ["1"]
 
 # Publication name and optional abbreviated version.
-publication = "Preprint"
-publication_short = "Preprint"
+publication = "In *AISTATS*"
+publication_short = "In *AISTATS*"
 
 # Abstract and optional shortened version.
 abstract = "Bayesian inference for factorial hidden Markov models is challenging due to the exponentially sized latent variable space. Standard Monte Carlo samplers can have difficulties effectively exploring the posterior landscape and are often restricted to exploration around localised regions that depend on initialisation. We introduce a general purpose ensemble Markov Chain Monte Carlo (MCMC) technique to improve on existing poorly mixing samplers. This is achieved by combining parallel tempering and an auxiliary variable scheme to exchange information between the chains in an efficient way. The latter exploits a genetic algorithm within an augmented Gibbs sampler. We compare our technique with various existing samplers in a simulation study as well as in a cancer genomics application, demonstrating the improvements obtained by our augmented ensemble approach."
@@ -65,4 +65,4 @@ caption = ""
 
 +++
 
-Updated preprint with new experiments will be soon on arxiv!
+This work has been accepted to AISTATS 2019. The updated version of the paper will be soon made available!

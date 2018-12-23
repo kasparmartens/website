@@ -1,6 +1,6 @@
 +++
 title = "Covariate Gaussian Process Latent Variable Models"
-date = "2018-08-01"
+date = "2019-01-05"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["K Märtens", "K Campbell", "C Yau"]
@@ -65,4 +65,4 @@ caption = ""
 
 +++
 
-This work will soon be on arXiv!
+The preprint is available on [arxiv](https://arxiv.org/abs/1810.06983).
