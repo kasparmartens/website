@@ -1,6 +1,6 @@
 +++
 title = "Covariate Gaussian Process Latent Variable Models"
-date = "2019-01-05"
+date = "2018-12-01"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["K Märtens", "K Campbell", "C Yau"]
@@ -17,8 +17,8 @@ authors = ["K Märtens", "K Campbell", "C Yau"]
 publication_types = ["0"]
 
 # Publication name and optional abbreviated version.
-publication = "Preprint"
-publication_short = "Preprint"
+publication = "Preprint (2018)"
+publication_short = "Preprint (2018)"
 
 # Abstract and optional shortened version.
 abstract = "Gaussian Process Regression (GPR) and Gaussian Process Latent Variable Models (GPLVM) offer a principled way of performing probabilistic non-linear regression and dimensionality reduction. In this paper we propose a hybrid between the two, the covariate-GPLVM (c-GPLVM), to perform dimensionality reduction in the presence of covariate information (e.g. continuous covariates, class labels, or censored survival times). This construction lets us adjust for covariate effects and reveals meaningful latent structure which is not revealed when using GPLVM. Furthermore, we introduce structured decomposable kernels which will let us interpret how the fixed and latent inputs contribute to feature-level variation, e.g. identify the presence of a non-linear interaction. We demonstrate the utility of this model on applications in disease progression modelling from high-dimensional gene expression data in the presence of additional phenotypes."
