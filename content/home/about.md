@@ -13,6 +13,8 @@ weight = 5
 
 # About me
 
+**News**: I am currently doing a research placement in [PROWLER.io](https://www.prowler.io/).
+
 I am a PhD student in Statistical Machine Learning at the University of Oxford, as part of the [OxCSML](http://csml.stats.ox.ac.uk/) group in the Department of Statistics. I am supervised by [Christopher Yau](http://cwcyau.github.io/) and [Chris Holmes](http://www.stats.ox.ac.uk/~cholmes/). 
 
 I have a broad interest in statistical machine learning and Bayesian inference techniques with a focus on tackling real problems in genomics and healthcare. 
