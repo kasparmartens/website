@@ -26,7 +26,7 @@ abstract = "Bayesian inference for factorial hidden Markov models is challenging
 abstract_short = "Here, we introduce an augmented ensemble MCMC technique to improve on existing poorly mixing samplers for factorial HMMs. This is achieved by combining parallel tempering and an auxiliary variable scheme to exchange information between the chains in an efficient way."
 
 # Featured image thumbnail (optional)
-image_preview = "schema_crossover.png"
+image_preview = "crossover_anim.gif"
 
 # Is this a selected publication? (true/false)
 selected = true
