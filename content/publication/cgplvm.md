@@ -1,5 +1,5 @@
 +++
-title = "Covariate Gaussian Process Latent Variable Models"
+title = "Decomposing feature-level variation with Covariate Gaussian Process Latent Variable Models"
 date = "2018-12-01"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
@@ -21,9 +21,9 @@ publication = "Preprint (2018)"
 publication_short = "Preprint (2018)"
 
 # Abstract and optional shortened version.
-abstract = "Gaussian Process Regression (GPR) and Gaussian Process Latent Variable Models (GPLVM) offer a principled way of performing probabilistic non-linear regression and dimensionality reduction. In this paper we propose a hybrid between the two, the covariate-GPLVM (c-GPLVM), to perform dimensionality reduction in the presence of covariate information (e.g. continuous covariates, class labels, or censored survival times). This construction lets us adjust for covariate effects and reveals meaningful latent structure which is not revealed when using GPLVM. Furthermore, we introduce structured decomposable kernels which will let us interpret how the fixed and latent inputs contribute to feature-level variation, e.g. identify the presence of a non-linear interaction. We demonstrate the utility of this model on applications in disease progression modelling from high-dimensional gene expression data in the presence of additional phenotypes."
+abstract = "The interpretation of complex high-dimensional data typically requires the use of dimensionality reduction techniques to extract explanatory low-dimensional representations. However, in many real-world problems these representations may not be sufficient to aid interpretation on their own, and it would be desirable to interpret the model in terms of the original features themselves. Our goal is to characterise how feature-level variation depends on latent low-dimensional representations, external covariates, and non-linear interactions between the two. In this paper, we propose to achieve this through a structured kernel decomposition in a hybrid Gaussian Process model which we call the Covariate Gaussian Process Latent Variable Model (c-GPLVM). We demonstrate the utility of our model on simulated examples and applications in disease progression modelling from high-dimensional gene expression data in the presence of additional phenotypes. In each setting we show how the c-GPLVM can extract low-dimensional structures from high-dimensional data sets whilst allowing a breakdown of feature-level variability that is not present in other commonly used dimensionality reduction approaches."
 
-abstract_short = "Dimensionality reduction is a key step towards gaining insights into complex high-dimensional data. However, real-life data often exhibits strong structure which is *a priori* known to us. This could be in various forms of covariate information (e.g. continuous measurements, class labels, or censored survival times). Here, we propose the covariate-GPLVM to learn a covariate-adjusted low-dimensional representation which would reveal meaningful latent structure shared across different class labels or covariate values."
+abstract_short = "The interpretation of complex high-dimensional data typically requires the use of dimensionality reduction techniques to extract explanatory low-dimensional representations. However, in many real-world problems these representations may not be sufficient to aid interpretation on their own, and it would be desirable to interpret the model in terms of the original features themselves. Our goal is to characterise how feature-level variation depends on latent low-dimensional representations, external covariates, and non-linear interactions between the two. In this paper, we propose to achieve this through a structured kernel decomposition in a hybrid Gaussian Process model which we call the Covariate Gaussian Process Latent Variable Model (c-GPLVM)."
 
 # Featured image thumbnail (optional)
 image_preview = "cGPLVM_cover.png"
@@ -38,8 +38,8 @@ projects = []
 
 # Links (optional).
 # url_pdf = ""
-url_preprint = "https://arxiv.org/abs/1810.06983"
-# url_code = ""
+# url_preprint = "https://arxiv.org/abs/1810.06983"
+url_code = "https://github.com/kasparmartens/c-GPLVM"
 # url_dataset = "#"
 # url_project = "#"
 # url_slides = "#"
@@ -49,7 +49,7 @@ url_preprint = "https://arxiv.org/abs/1810.06983"
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-# url_custom = [{name = "Link to paper", url = "https://doi.org/10.1093/bioinformatics/btw304"}]
+url_custom = [{name = "Link to paper", url = "http://proceedings.mlr.press/v97/martens19a.html"}]
 
 # Does the content use math formatting?
 math = true
