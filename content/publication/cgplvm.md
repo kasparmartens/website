@@ -37,7 +37,7 @@ selected = true
 projects = []
 
 # Links (optional).
-# url_pdf = ""
+url_pdf = "http://proceedings.mlr.press/v97/martens19a.html"
 # url_preprint = "https://arxiv.org/abs/1810.06983"
 url_code = "https://github.com/kasparmartens/c-GPLVM"
 # url_dataset = "#"
@@ -49,7 +49,7 @@ url_code = "https://github.com/kasparmartens/c-GPLVM"
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-url_custom = [{name = "Link to paper", url = "http://proceedings.mlr.press/v97/martens19a.html"}]
+# url_custom = [{name = "Link to paper", url = "http://proceedings.mlr.press/v97/martens19a.html"}]
 
 # Does the content use math formatting?
 math = true
