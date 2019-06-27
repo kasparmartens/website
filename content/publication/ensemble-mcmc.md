@@ -1,6 +1,6 @@
 +++
 title = "Augmented Ensemble MCMC sampling in Factorial Hidden Markov Models"
-date = "2018-09-01"
+date = "2019-04-01"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["K Märtens", "MK Titsias", "C Yau"]
@@ -26,7 +26,7 @@ abstract = "Bayesian inference for factorial hidden Markov models is challenging
 abstract_short = "Here, we introduce an augmented ensemble MCMC technique to improve on existing poorly mixing samplers for factorial HMMs. This is achieved by combining parallel tempering and an auxiliary variable scheme to exchange information between the chains in an efficient way."
 
 # Featured image thumbnail (optional)
-image_preview = "crossover_anim.gif"
+image_preview = ""
 
 # Is this a selected publication? (true/false)
 selected = true
@@ -60,9 +60,10 @@ highlight = true
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
-image = "ensemble_logposteriors.png"
+#image = "ensemble_logposteriors.png"
+image = "crossover_anim.gif"
 caption = ""
 
 +++
 
-This work has been accepted to AISTATS 2019. The updated version of the paper will be soon made available!
+This work was presented at AISTATS 2019.

@@ -1,6 +1,6 @@
 +++
 title = "Decomposing feature-level variation with Covariate Gaussian Process Latent Variable Models"
-date = "2018-12-01"
+date = "2019-06-01"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["K Märtens", "K Campbell", "C Yau"]
@@ -23,7 +23,7 @@ publication_short = "Accepted to *ICML* (2019)"
 # Abstract and optional shortened version.
 abstract = "The interpretation of complex high-dimensional data typically requires the use of dimensionality reduction techniques to extract explanatory low-dimensional representations. However, in many real-world problems these representations may not be sufficient to aid interpretation on their own, and it would be desirable to interpret the model in terms of the original features themselves. Our goal is to characterise how feature-level variation depends on latent low-dimensional representations, external covariates, and non-linear interactions between the two. In this paper, we propose to achieve this through a structured kernel decomposition in a hybrid Gaussian Process model which we call the Covariate Gaussian Process Latent Variable Model (c-GPLVM). We demonstrate the utility of our model on simulated examples and applications in disease progression modelling from high-dimensional gene expression data in the presence of additional phenotypes. In each setting we show how the c-GPLVM can extract low-dimensional structures from high-dimensional data sets whilst allowing a breakdown of feature-level variability that is not present in other commonly used dimensionality reduction approaches."
 
-abstract_short = "The interpretation of high-dimensional data typically requires the use of dimensionality reduction techniques. However, in many real-world problems the extracted low-dimensional representations may not be sufficient to aid interpretation on their own, and it would be desirable to interpret the model in terms of the original features themselves. Our goal is to characterise how *feature-level* variation depends on latent low-dimensional representations, external covariates, and non-linear interactions between the two. In this paper, we propose to achieve this through a structured kernel decomposition in a hybrid Gaussian Process model which we call the Covariate Gaussian Process Latent Variable Model (c-GPLVM)."
+abstract_short = "The interpretation of high-dimensional data typically requires the use of dimensionality reduction techniques. However, in many real-world problems the extracted low-dimensional representations may not be sufficient to aid interpretation on their own, and it would be desirable to interpret the model in terms of the original features themselves. Our goal is to characterise how *feature-level* variation depends on latent low-dimensional representations, external covariates, and non-linear interactions between the two. Here, we propose to achieve this through a structured kernel decomposition in a hybrid Gaussian Process model which we call the Covariate Gaussian Process Latent Variable Model (c-GPLVM)."
 
 # Featured image thumbnail (optional)
 image_preview = "cGPLVM_cover.png"
@@ -42,9 +42,9 @@ url_pdf = "http://proceedings.mlr.press/v97/martens19a.html"
 url_code = "https://github.com/kasparmartens/c-GPLVM"
 # url_dataset = "#"
 # url_project = "#"
-# url_slides = "#"
-# url_video = "#"
-# url_poster = ""
+url_slides = "https://icml.cc/media/Slides/icml/2019/201(11-16-00)-11-16-20-4994-decomposing_fea.pdf"
+url_video = "https://slideslive.com/38916814/general-ml"
+url_poster = "https://pbs.twimg.com/media/D8YnUOBXYAAvKnX?format=jpg"
 # url_source = "#"
 
 # Custom links (optional).
@@ -65,4 +65,3 @@ caption = ""
 
 +++
 
-The preprint is available on [arxiv](https://arxiv.org/abs/1810.06983).
