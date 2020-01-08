@@ -16,7 +16,7 @@ weight = 5
 I am a PhD student in Statistical Machine Learning at the University of Oxford, as part of the [OxCSML](http://csml.stats.ox.ac.uk/) group in the Department of Statistics. I am supervised by [Christopher Yau](http://cwcyau.github.io/) and [Chris Holmes](http://www.stats.ox.ac.uk/~cholmes/). 
 
 I have a broad interest in statistical machine learning and Bayesian inference techniques with a focus on tackling real problems in genomics and healthcare. 
-My PhD research focuses on developing probabilistic latent variable models (such as Gaussian Process Latent Variable Models and Variational AutoEncoders) with applications to biomedical data. 
+My PhD research focuses on developing probabilistic latent variable models (such as Gaussian Process Latent Variable Models and Variational Autoencoders) with applications to biomedical data. 
 
 I am also enthusiastic about R and data visualisation, and I co-organise the [Oxford R user group](https://www.meetup.com/Oxford-R-User-Group/?_cookie-check=YjefwQo7hibpOazc) meetups. Additionally, in my research I like to make use of automatic differentiation frameworks (such as TensorFlow and PyTorch) and I am enthusiastic about probabilistic programming frameworks (such as Stan, PyMC3, or Edward). 
 
@@ -24,6 +24,7 @@ Prior to the PhD, I studied for BSc and MSc at the University of Tartu in Estoni
 
 ### News
 
+* January 2020 -- AISTATS success! Two papers (on interpretability within Variational Autoencoders) accepted to AISTATS 2020
 * April 2019 -- Our paper [Decomposing feature-level variation with Covariate Gaussian Process Latent Variable Models](http://proceedings.mlr.press/v97/martens19a.html) has been accepted to ICML 2019
 * February 2019 -- I am excited to spend the next three months on a research placement in [PROWLER.io](https://www.prowler.io/)
 * December 2018 -- Our paper [Augmented Ensemble MCMC sampling in Factorial Hidden Markov Models](http://proceedings.mlr.press/v89/martens19a.html) has been accepted for publication in AISTATS 2019
