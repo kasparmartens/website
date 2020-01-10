@@ -24,7 +24,9 @@ Prior to the PhD, I studied for BSc and MSc at the University of Tartu in Estoni
 
 ### News
 
-* January 2020 -- AISTATS success! Two papers (on interpretability within Variational Autoencoders) accepted to AISTATS 2020
+* January 2020 -- AISTATS success! Two papers (with Chris Yau) accepted to AISTATS 2020:
+    * Neural Decomposition: Functional ANOVA with Variational Autoencoders
+    * BasisVAE: Translation-invariant feature-level clustering with Variational Autoencoders
 * April 2019 -- Our paper [Decomposing feature-level variation with Covariate Gaussian Process Latent Variable Models](http://proceedings.mlr.press/v97/martens19a.html) has been accepted to ICML 2019
 * February 2019 -- I am excited to spend the next three months on a research placement in [PROWLER.io](https://www.prowler.io/)
 * December 2018 -- Our paper [Augmented Ensemble MCMC sampling in Factorial Hidden Markov Models](http://proceedings.mlr.press/v89/martens19a.html) has been accepted for publication in AISTATS 2019
