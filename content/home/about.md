@@ -16,7 +16,8 @@ weight = 5
 I am a PhD student in Statistical Machine Learning at the University of Oxford, as part of the [OxCSML](http://csml.stats.ox.ac.uk/) group in the Department of Statistics. I am supervised by [Christopher Yau](http://cwcyau.github.io/) and [Chris Holmes](http://www.stats.ox.ac.uk/~cholmes/). 
 
 I have a broad interest in statistical machine learning and Bayesian inference techniques with a focus on tackling real problems in genomics and healthcare. 
-My PhD research focuses on developing probabilistic latent variable models (such as Gaussian Process Latent Variable Models and Variational Autoencoders) with applications to biomedical data. 
+My PhD research focuses on enabling interpretability within probabilistic latent variable models (such as Gaussian Process Latent Variable Models and Variational Autoencoders). 
+By synthesising ideas from statistics and machine learning, my goal is to embed interpretable structure within such non-linear models, in order to make them more useful for biomedical applications. 
 
 I am also enthusiastic about R and data visualisation, and I co-organise the [Oxford R user group](https://www.meetup.com/Oxford-R-User-Group/?_cookie-check=YjefwQo7hibpOazc) meetups. Additionally, in my research I like to make use of automatic differentiation frameworks (such as TensorFlow and PyTorch) and I am enthusiastic about probabilistic programming frameworks (such as Stan, PyMC3, or Edward). 
 
