@@ -37,7 +37,7 @@ selected = true
 projects = []
 
 # Links (optional).
-url_pdf = ""
+url_pdf = "https://arxiv.org/abs/2003.03462"
 url_code = "https://github.com/kasparmartens/BasisVAE"
 # url_dataset = "#"
 # url_project = "#"
