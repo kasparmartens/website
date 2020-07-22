@@ -25,7 +25,8 @@ Prior to the PhD, I studied for BSc and MSc at the University of Tartu in Estoni
 
 ### News
 
-* June 2020 -- I am excited to be (remotely) joining Apple Health AI for an internship
+* July 2020 -- It's an honour to have been selected for the [ACM CHIL 2020](https://www.chilconference.org/) Doctoral Symposium
+* June 2020 -- I am excited to be (remotely) joining Apple Health AI for an internship this summer
 * January 2020 -- AISTATS success! Two papers accepted to AISTATS 2020!
 * April 2019 -- Our paper [Decomposing feature-level variation with Covariate Gaussian Process Latent Variable Models](http://proceedings.mlr.press/v97/martens19a.html) has been accepted to ICML 2019
 * February 2019 -- I am excited to spend the next three months on a research placement in [PROWLER.io](https://www.prowler.io/)
