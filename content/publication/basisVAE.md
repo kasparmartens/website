@@ -23,7 +23,7 @@ publication_short = "Accepted to *AISTATS* (2020)"
 # Abstract and optional shortened version.
 abstract = "Variational Autoencoders (VAEs) provide a flexible and scalable framework for non-linear dimensionality reduction. However, in application domains such as genomics where data sets are typically tabular and high-dimensional, a black-box approach to dimensionality reduction does not provide sufficient insights. Common data analysis workflows additionally use clustering techniques to identify groups of similar features. This usually leads to a two-stage process, however, it would be desirable to construct a joint modelling framework for simultaneous dimensionality reduction and clustering of features. In this paper, we propose to achieve this through the BasisVAE: a combination of the VAE and a probabilistic clustering prior, which lets us learn a one-hot basis function representation as part of the decoder network. Furthermore, for scenarios where not all features are aligned, we develop an extension to handle translation-invariant basis functions. We show how a collapsed variational inference scheme leads to scalable and efficient inference for BasisVAE, demonstrated on various toy examples as well as on single-cell gene expression data."
 
-abstract_short = "It would be desirable to construct a joint modelling framework for simultaneous dimensionality reduction and clustering of features. Here, we focus on embedding such capabilities within the Variational Autoencoder (VAE) framework. Specifically, we propose the BasisVAE: a combination of the VAE and a probabilistic clustering prior, which lets us learn a one-hot basis function representation as part of the decoder network. Furthermore, for scenarios where not all features are aligned, we develop an extension to handle translation-invariant basis functions."
+abstract_short = "It would be desirable to construct a joint modelling framework for simultaneous dimensionality reduction and clustering of features. Here, we focus on embedding such capabilities within the Variational Autoencoder (VAE) framework. Specifically, we introduce a probabilistic clustering prior within the VAE *decoding* model which lets us learn a one-hot basis function representation. For scenarios where not all features are aligned, we develop an extension to handle translation-invariant basis functions."
 
 # Featured image thumbnail (optional)
 image_preview = "BasisVAE_schema.png"
@@ -41,7 +41,7 @@ url_pdf = "https://arxiv.org/abs/2003.03462"
 url_code = "https://github.com/kasparmartens/BasisVAE"
 # url_dataset = "#"
 # url_project = "#"
-url_slides = ""
+url_slides = "https://drive.google.com/file/d/1qVJ6QWgtqvyA7KPYHyzVKILvjagTbmys/view"
 url_video = ""
 url_poster = ""
 # url_source = "#"
