@@ -24,8 +24,10 @@ Prior to the PhD, I studied for BSc and MSc at the University of Tartu in Estoni
 
 ### News
 
-* July 2020 -- It's an honour to have been selected for the [ACM CHIL 2020](https://www.chilconference.org/) Doctoral Symposium
-    * Video of my talk is available [here](https://www.chilconference.org/ds_r.html)
+* October 2020 -- I have been lucky to have been awarded a Turing-Crick Biomedical Data Science Award
+* September 2020 -- I have succesfully defended my DPhil thesis (with no corrections)!
+* August 2020 -- Both of my (virtual) AISTATS talks are now available on SlidesLive: [BasisVAE](https://slideslive.com/38930217/basisvae-translationinvariant-featurelevel-clustering-with-variational-autoencoders) and [Neural Decomposition](https://slideslive.com/38930216/neural-decomposition-functional-anova-with-variational-autoencoders)
+* July 2020 -- It's an honour to have been selected for the [ACM CHIL 2020](https://www.chilconference.org/) Doctoral Symposium. Video of my talk is available [here](https://www.chilconference.org/ds_r.html)
 * June 2020 -- I am excited to be (remotely) joining **Apple Health AI** for an internship this summer
 * January 2020 -- AISTATS success! Two papers accepted to AISTATS 2020!
 * April 2019 -- Our paper [Decomposing feature-level variation with Covariate Gaussian Process Latent Variable Models](http://proceedings.mlr.press/v97/martens19a.html) has been accepted to ICML 2019
