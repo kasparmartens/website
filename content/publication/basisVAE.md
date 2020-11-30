@@ -42,7 +42,7 @@ url_code = "https://github.com/kasparmartens/BasisVAE"
 # url_dataset = "#"
 # url_project = "#"
 url_slides = "https://drive.google.com/file/d/1qVJ6QWgtqvyA7KPYHyzVKILvjagTbmys/view"
-url_video = ""
+url_video = "https://slideslive.com/38930217/basisvae-translationinvariant-featurelevel-clustering-with-variational-autoencoders"
 url_poster = ""
 # url_source = "#"
 
