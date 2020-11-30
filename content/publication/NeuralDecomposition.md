@@ -42,7 +42,7 @@ url_code = "https://github.com/kasparmartens/NeuralDecomposition"
 # url_dataset = "#"
 # url_project = "#"
 url_slides = "https://drive.google.com/file/d/1xVWF28cz-SXLFtF3hGdmDUR0Cgh9WR1G/view"
-url_video = ""
+url_video = "https://slideslive.com/38930216/neural-decomposition-functional-anova-with-variational-autoencoders"
 url_poster = ""
 # url_source = "#"
 
