@@ -28,7 +28,7 @@ Prior to my PhD, I studied for BSc and MSc at the University of Tartu in Estonia
 * December 2020 -- Alongside my postdoctoral **fellowship at the Alan Turing Institute**, I am excited to join **Apple Health AI** in a part-time role. 
 * October 2020 -- I have been lucky to have been awarded a **Turing-Crick Biomedical Data Science Award**
 * September 2020 -- I have succesfully defended my DPhil thesis (with no corrections)! Thanks to my examiners Samuel Kaski and François Caron for the thoughtful discussion! 
-    *Update:* My thesis is now available [here](https://ora.ox.ac.uk/objects/uuid:36cdd6fa-fec1-44ca-9f0f-876bee7783d6)
+  * *Update:* My thesis is now available [here](https://ora.ox.ac.uk/objects/uuid:36cdd6fa-fec1-44ca-9f0f-876bee7783d6)
 * August 2020 -- Both of my (virtual) AISTATS talks are now available on SlidesLive: [BasisVAE](https://slideslive.com/38930217/basisvae-translationinvariant-featurelevel-clustering-with-variational-autoencoders) and [Neural Decomposition](https://slideslive.com/38930216/neural-decomposition-functional-anova-with-variational-autoencoders)
 * July 2020 -- It's an honour to have been selected for the [ACM CHIL 2020](https://www.chilconference.org/) Doctoral Symposium. Video of my talk is available [here](https://www.chilconference.org/ds_r.html)
 * June 2020 -- I am excited to be (remotely) joining **Apple Health AI** for an internship this summer
