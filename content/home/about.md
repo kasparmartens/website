@@ -14,7 +14,7 @@ weight = 5
 # About me
 
 I have recently finished my PhD in Statistical Machine Learning at the University of Oxford, as part of the [OxCSML](http://csml.stats.ox.ac.uk/) group in the Department of Statistics. I was supervised by [Christopher Yau](http://cwcyau.github.io/) and [Chris Holmes](http://www.stats.ox.ac.uk/~cholmes/). 
-I currently share my time between [the Alan Turing Institute](https://www.turing.ac.uk/) (where I am a postdoctoral Research Fellow, a recipient of the *Turing-Crick Biomedical Data Science Award* ) and **Apple Health AI**. 
+I currently share my time between [the Alan Turing Institute](https://www.turing.ac.uk/) (where I am a postdoctoral Research Fellow, a recipient of the *Turing-Crick Biomedical Data Science Award*) and **Apple Health AI**. 
 
 I have a broad interest in statistical machine learning and Bayesian inference techniques with a focus on tackling real problems in genomics and healthcare. In particular, I have worked on various non-linear latent variable models (such as Gaussian Process Latent Variable Models and Variational Autoencoders) with the goal to enable certain notions of feature-level interpretability. 
 
