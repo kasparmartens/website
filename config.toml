@@ -6,7 +6,7 @@
 baseurl = "/"
 
 # Title of your site
-title = "Kaspar Märtens | PhD student in Statistical Machine Learning"
+title = "Kaspar Märtens | Statistical Machine Learning"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
@@ -51,7 +51,7 @@ defaultContentLanguageInSubdir = false
 
   # Your details.
   name = "Kaspar Märtens"
-  role = "PhD student in Statistical Machine Learning"
+  role = "Research Fellow in Statistical Machine Learning"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
