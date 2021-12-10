@@ -24,6 +24,7 @@ Prior to my PhD, I studied for BSc and MSc at the University of Tartu in Estonia
 
 ### News
 
+* December 2021 -- I will be presenting our work on identifying rare clusters in the **NeurIPS** workshop *Learning Meaningful Representations of Life (LMRL)*
 * January 2021 -- It was great to be part of this collaborative effort, our primer on [Bayesian statistics and modelling](https://www.nature.com/articles/s43586-020-00001-2) is out!
 * December 2020 -- Alongside my postdoctoral **fellowship at the Alan Turing Institute**, I am excited to join **Apple Health AI** in a part-time role. 
 * October 2020 -- I have been lucky to have been awarded a **Turing-Crick Biomedical Data Science Award**
