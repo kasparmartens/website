@@ -16,11 +16,11 @@ weight = 5
 I recently finished my PhD in Statistical Machine Learning at the University of Oxford, as part of the [OxCSML](http://csml.stats.ox.ac.uk/) group in the Department of Statistics, where I was supervised by [Christopher Yau](http://cwcyau.github.io/) and [Chris Holmes](http://www.stats.ox.ac.uk/~cholmes/). 
 I currently share my time between [the Alan Turing Institute](https://www.turing.ac.uk/) (where I am a postdoctoral Research Fellow, a recipient of the *Turing-Crick Biomedical Data Science Award*) and **Apple Health AI**. 
 
-I have a broad interest in developing novel statistical machine learning methodologies with a focus on tackling real-world problems in genomics and healthcare. 
+I have a broad interest in developing statistical machine learning methodologies with a focus on tackling real-world problems in genomics and healthcare. 
 During my PhD, I developed extensions of [Gaussian Process Latent Variable Models](http://proceedings.mlr.press/v97/martens19a.html) and [Variational Autoencoders](https://arxiv.org/abs/2003.03462) with the goal to enable certain notions of [feature-level interpretability](https://arxiv.org/abs/2006.14293). 
 More recently, I have been working on the identification of rare clusters, as well as developing targeted data augmentations to ensure fairness across demographic subpopulations. 
 
-I am also excited about research in the intersection of probabilistic modelling and deep learning, where on the one hand, building blocks from the deep learning toolbox have led to advances in Bayesian inference, and on the other hand, embedding Bayesian concepts within neural network models can lead to various benefits such as uncertainty quantification. In addition to robustness, explainability and fairness, calibrated uncertainty is another important property for *trustworthy* machine learning. 
+I am also excited about research in the intersection of probabilistic modelling and deep learning, where ideas from Bayesian inference and techniques from deep learning meet. Alongside robustness, explainability and fairness, calibrated uncertainty quantification is another important property towards building *trustworthy* machine learning for biomedical applications. 
 
 Prior to my PhD, I studied for BSc and MSc at the University of Tartu in Estonia. There I was part of the BIIT research group at the Institute of Computer Science, where I worked on statistical modelling in genomics under the supervision of [Raivo Kolde](https://scholar.google.com/citations?user=IYhbHFMAAAAJ&hl=en) and [Leopold Parts](http://www.sanger.ac.uk/people/directory/parts-leopold). 
 
