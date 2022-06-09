@@ -18,12 +18,10 @@ I currently share my time between [the Alan Turing Institute](https://www.turing
 
 ### Research interests
 
-I have a broad interest in developing probabilistic machine learning methods (such as *Deep Generative Models*) with a focus on tackling real-world problems in genomics and healthcare. 
+I have a broad interest in developing probabilistic machine learning methods (such as *Deep Generative Models*) with a focus on tackling real-world problems in genomics and healthcare. My interests range from the intersection of Bayesian inference and deep learning (such as incorporating prior knowledge and structure within deep neural networks, multi-task/meta-learning etc) to research towards trustworthy ML for biomedical applications. 
 
 During my PhD, I developed extensions of [Gaussian Process Latent Variable Models](http://proceedings.mlr.press/v97/martens19a.html) and [Variational Autoencoders](https://arxiv.org/abs/2003.03462) with the goal to enable certain notions of [feature-level interpretability](https://arxiv.org/abs/2006.14293). 
 More recently, I have been working on the identification of rare clusters, as well as developing targeted data augmentations to ensure fairness across demographic subpopulations. 
-
-I am also excited about research in the intersection of *probabilistic modelling* and *deep learning*, where ideas from Bayesian inference and techniques from deep learning meet. Alongside robustness, explainability and fairness, calibrated uncertainty quantification is another important property towards building *trustworthy* machine learning for biomedical applications. 
 
 
 ### News
