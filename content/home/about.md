@@ -22,8 +22,10 @@ I have a broad interest in developing probabilistic machine learning methods (su
 
 My interests range from the intersection of Bayesian inference and deep learning (such as incorporating prior knowledge and structure within deep neural networks, *multi-task/meta-learning* etc) to research towards *trustworthy* ML for biomedical applications. 
 
-During my PhD, I developed extensions of [Gaussian Process Latent Variable Models](http://proceedings.mlr.press/v97/martens19a.html) and [Variational Autoencoders](https://arxiv.org/abs/2003.03462) with the goal to enable certain notions of [feature-level interpretability](https://arxiv.org/abs/2006.14293). 
+During my PhD, I developed extensions of [Gaussian Process Latent Variable Models](http://proceedings.mlr.press/v97/martens19a.html) and [Variational Autoencoders](https://arxiv.org/abs/2003.03462) with the goal to enable certain notions of [feature-level interpretability](https://arxiv.org/abs/2006.14293) for the analysis of high-dimensional tabular data. 
 More recently, I have been working on the identification of rare clusters, as well as developing targeted data augmentations to ensure fairness across demographic subpopulations. 
+
+Prior to my PhD, I studied for BSc and MSc at the University of Tartu in Estonia, where I worked on statistical modelling in genomics under the supervision of [Raivo Kolde](https://scholar.google.com/citations?user=IYhbHFMAAAAJ&hl=en) and [Leopold Parts](http://www.sanger.ac.uk/people/directory/parts-leopold).
 
 
 ### News
