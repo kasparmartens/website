@@ -13,12 +13,14 @@ weight = 5
 
 # About me
 
+I am interested in developing **probabilistic Machine Learning** techniques for **healthcare and genomics** applications. 
+
 I recently finished my PhD in Statistical Machine Learning at the University of Oxford, as part of the [OxCSML](http://csml.stats.ox.ac.uk/) group in the Department of Statistics, where I was supervised by [Christopher Yau](http://cwcyau.github.io/) and [Chris Holmes](http://www.stats.ox.ac.uk/~cholmes/). 
-I currently share my time between [the Alan Turing Institute](https://www.turing.ac.uk/) (where I am a postdoctoral Research Fellow, a recipient of the *Turing-Crick Biomedical Data Science Award*) and **Apple Health AI**. 
+Since then I have been sharing my time between [the Alan Turing Institute](https://www.turing.ac.uk/) (where I am a postdoctoral Research Fellow, a recipient of the *Turing-Crick Biomedical Data Science Award*) and **Apple Health AI**. 
 
 ### Research interests
 
-I have a broad interest in developing probabilistic machine learning methods (such as *Deep Generative Models*) with a focus on tackling real-world problems in genomics and healthcare. 
+I have a broad interest in developing probabilistic machine learning methods (such as *Deep Generative Models*) with a focus on tackling real-world biomedical problems. 
 
 My interests range from the intersection of Bayesian inference and deep learning (such as incorporating prior knowledge and structure within deep neural networks, *multi-task/meta-learning* etc) to research towards *trustworthy* ML for biomedical applications. 
 
