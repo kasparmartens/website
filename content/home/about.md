@@ -13,10 +13,10 @@ weight = 5
 
 # About me
 
-I am interested in developing **probabilistic Machine Learning** techniques for **healthcare and genomics** applications. 
+I am interested in **probabilistic Machine Learning** techniques with a focus on **healthcare and genomics** applications. 
 
 I recently finished my PhD in Statistical Machine Learning at the University of Oxford, as part of the [OxCSML](http://csml.stats.ox.ac.uk/) group in the Department of Statistics, where I was supervised by [Christopher Yau](http://cwcyau.github.io/) and [Chris Holmes](http://www.stats.ox.ac.uk/~cholmes/). 
-Since then I have been sharing my time between [the Alan Turing Institute](https://www.turing.ac.uk/) (where I am a postdoctoral Research Fellow, a recipient of the *Turing-Crick Biomedical Data Science Award*) and **Apple Health AI**. 
+Upon graduation, I had an opportunity to share my time between [the Alan Turing Institute](https://www.turing.ac.uk/) (where I was a postdoctoral Research Fellow, a recipient of the *Turing-Crick Biomedical Data Science Award*) and **Apple  Health AI**. I am currently a postdoctoral researcher in the [Big Data Institute](https://www.bdi.ox.ac.uk/) in Oxford. 
 
 ### Research interests
 
