@@ -72,5 +72,5 @@
 {{ end }}
 
 {{ range $.Params.url_github }}
-<a class="github-button" href="https://github.com/kasparmartens/BasisVAE" data-icon="octicon-star" data-show-count="true" aria-label="Star kasparmartens/BasisVAE on GitHub">Star</a>
+<a class="github-button {{ if $is_list }} {{end}}" href="https://github.com/kasparmartens/BasisVAE" data-icon="octicon-star" data-show-count="true" aria-label="Star kasparmartens/BasisVAE on GitHub">Star</a>
 {{ end }}
