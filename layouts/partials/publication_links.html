@@ -1,3 +1,6 @@
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
 {{ $is_list := .is_list }}
 {{ $ := .content }}
 
@@ -66,4 +69,8 @@
 <a class="btn btn-primary btn-outline{{ if $is_list }} btn-xs{{end}}" href="{{ .url | absURL }}" target="_blank" rel="noopener">
   {{ .name }}
 </a>
+{{ end }}
+
+{{ range $.Params.url_github }}
+<a class="github-button" href="https://github.com/kasparmartens/BasisVAE" data-icon="octicon-star" data-show-count="true" aria-label="Star kasparmartens/BasisVAE on GitHub">Star</a>
 {{ end }}
