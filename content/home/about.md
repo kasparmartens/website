@@ -32,7 +32,9 @@ Prior to my PhD, I studied for BSc and MSc at the University of Tartu in Estonia
 
 ### News
 
-* December 2021 -- I will be presenting our work on identifying rare clusters in the **NeurIPS** workshop *Learning Meaningful Representations of Life (LMRL)*
+* December 2022 -- I will be presenting our work on multimodal generative models in Cambridge, I will be there for the Turing AI Fellows Day as well as the the NeurIPS meetup. Look forward to it!
+* July 2022 -- Our preprint [Rarity: Discovering rare cell populations from single-cell imaging data](https://www.biorxiv.org/content/10.1101/2022.07.15.500256v1) is now out. This work was a collaboration as part of the *Turing-Crick Award*
+* December 2021 -- I will be presenting our work on [identifying rare clusters](https://drive.google.com/file/d/17xHc8Bbq40TfD1E0Uh2ZLa59sBbOWg25/view?usp=share_link) in the **NeurIPS** workshop *Learning Meaningful Representations of Life (LMRL)*
 * January 2021 -- It was great to be part of this collaborative effort, our primer on [Bayesian statistics and modelling](https://www.nature.com/articles/s43586-020-00001-2) is out!
 * December 2020 -- Alongside my postdoctoral **fellowship at the Alan Turing Institute**, I am excited to join **Apple Health AI** in a part-time role. 
 * October 2020 -- I have been lucky to have been awarded a **Turing-Crick Biomedical Data Science Award**
