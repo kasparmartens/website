@@ -13,14 +13,16 @@ weight = 5
 
 # About me
 
-I am interested in **probabilistic Machine Learning** techniques with a focus on **healthcare and genomics** applications. 
+I am a Machine Learning researcher, passionate about creating **novel AI/ML methods** that would make a real **impact** towards **improving human health**.
+
+I have experience developing **probabilistic Machine Learning** techniques across a range of **healthcare and genomics** applications, both in academia and industry. 
 
 I recently finished my PhD in Statistical Machine Learning at the University of Oxford, as part of the [OxCSML](http://csml.stats.ox.ac.uk/) group in the Department of Statistics, where I was supervised by [Christopher Yau](http://cwcyau.github.io/) and [Chris Holmes](http://www.stats.ox.ac.uk/~cholmes/). 
-Upon graduation, I had an opportunity to share my time between [the Alan Turing Institute](https://www.turing.ac.uk/) (where I was a postdoctoral Research Fellow, a recipient of the *Turing-Crick Biomedical Data Science Award*) and **Apple  Health AI**. I am currently a postdoctoral researcher in the [Big Data Institute](https://www.bdi.ox.ac.uk/) in Oxford. 
+Upon graduation, I had an opportunity to share my time between [the Alan Turing Institute](https://www.turing.ac.uk/) (where I was a postdoctoral Research Fellow, a recipient of the *Turing-Crick Biomedical Data Science Award*) and **Apple  Health AI**. I am currently back in Oxford, as a postdoctoral researcher in the [Big Data Institute](https://www.bdi.ox.ac.uk/). 
 
 ### Research interests
 
-I have a broad interest in developing probabilistic machine learning methods (such as *Deep Generative Models*) with a focus on tackling real-world biomedical problems. 
+I have a broad interest in developing probabilistic ML methods (such as *Deep Generative Models*) with a focus on tackling real-world biomedical problems. 
 
 My interests range from the intersection of Bayesian inference and deep learning (such as incorporating prior knowledge and structure within deep neural networks, *multi-task/meta-learning* etc) to research towards *trustworthy* ML for biomedical applications. 
 
@@ -33,6 +35,7 @@ Prior to my PhD, I studied for BSc and MSc at the University of Tartu in Estonia
 ### News
 
 * December 2022 -- I will be presenting our work on multimodal generative models in Cambridge, I will be there for the Turing AI Fellows Day as well as the the NeurIPS meetup. Look forward to it!
+* September 2022 -- I look forward to teaching in [NGSchool2022: Machine Learning in Computational Biology](https://ngschool.eu/ngschool2022/) in Poland
 * July 2022 -- Our preprint [Rarity: Discovering rare cell populations from single-cell imaging data](https://www.biorxiv.org/content/10.1101/2022.07.15.500256v1) is now out. This work was a collaboration as part of the *Turing-Crick Award*
 * December 2021 -- I will be presenting our work on [identifying rare clusters](https://drive.google.com/file/d/17xHc8Bbq40TfD1E0Uh2ZLa59sBbOWg25/view?usp=share_link) in the **NeurIPS** workshop *Learning Meaningful Representations of Life (LMRL)*
 * January 2021 -- It was great to be part of this collaborative effort, our primer on [Bayesian statistics and modelling](https://www.nature.com/articles/s43586-020-00001-2) is out!
