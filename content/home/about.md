@@ -13,12 +13,11 @@ weight = 5
 
 # About me
 
-I am a Machine Learning researcher, passionate about creating **novel AI/ML methods** that would make a real **impact** towards **improving human health**.
+I am a Machine Learning researcher, passionate about creating **novel AI/ML methods** that would make a real **impact** towards advancing our understanding of biological sciences and  **improving human health**. I have experience developing probabilistic ML techniques across a range of biomedical applications, both in academia and industry. I am currently a Research Scientist at **Novo Nordisk. 
 
-I have experience developing **probabilistic Machine Learning** techniques across a range of **healthcare and genomics** applications, both in academia and industry. 
+I did my PhD in Statistical Machine Learning at the University of Oxford, as part of the [OxCSML](http://csml.stats.ox.ac.uk/) group in the Department of Statistics, where I was supervised by [Christopher Yau](http://cwcyau.github.io/) and [Chris Holmes](http://www.stats.ox.ac.uk/~cholmes/). 
+Upon graduation, I had an opportunity to spend some time in academia, in [the Alan Turing Institute](https://www.turing.ac.uk/) (as a recipient of the *Turing-Crick Biomedical Data Science Award*) and the [Big Data Institute](https://www.bdi.ox.ac.uk/) in Oxford, as well as in the **Apple ** Health AI team. 
 
-I recently finished my PhD in Statistical Machine Learning at the University of Oxford, as part of the [OxCSML](http://csml.stats.ox.ac.uk/) group in the Department of Statistics, where I was supervised by [Christopher Yau](http://cwcyau.github.io/) and [Chris Holmes](http://www.stats.ox.ac.uk/~cholmes/). 
-Upon graduation, I had an opportunity to share my time between [the Alan Turing Institute](https://www.turing.ac.uk/) (where I was a postdoctoral Research Fellow, a recipient of the *Turing-Crick Biomedical Data Science Award*) and **Apple  Health AI**. I am currently back in Oxford, as a postdoctoral researcher in the [Big Data Institute](https://www.bdi.ox.ac.uk/). 
 
 ### Research interests
 
