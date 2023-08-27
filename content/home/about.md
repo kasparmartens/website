@@ -13,7 +13,7 @@ weight = 5
 
 I am a Machine Learning researcher, passionate about creating **novel AI/ML methods** that would make a **real impact** towards advancing our understanding of biological sciences and  improving human health. I am currently a Research Scientist at [Novo Nordisk](https://www.novonordisk.com/). 
 
-I did my PhD in Statistical Machine Learning at the University of Oxford, as part of the [OxCSML](http://csml.stats.ox.ac.uk/) group in the Department of Statistics, where I was supervised by [Christopher Yau](http://cwcyau.github.io/) and [Chris Holmes](http://www.stats.ox.ac.uk/~cholmes/). During my PhD, I was also able to intern in [Prowler.io (now Secondmind)](https://www.secondmind.ai/) as well as in Apple. 
+I did my PhD in Statistical Machine Learning at the University of Oxford, as part of the [OxCSML](http://csml.stats.ox.ac.uk/) group in the Department of Statistics, where I was supervised by [Christopher Yau](http://cwcyau.github.io/) and [Chris Holmes](http://www.stats.ox.ac.uk/~cholmes/). 
 Upon graduation, I had an opportunity to continue working with the [Apple](https://www.apple.com/by/ios/health/)  Health AI team, as well as spend some time in academia, in [the Alan Turing Institute](https://www.turing.ac.uk/) (as a recipient of the *Turing-Crick Biomedical Data Science Award*) and the [Big Data Institute](https://www.bdi.ox.ac.uk/) in Oxford.  
 
 
