@@ -24,3 +24,5 @@ I have a broad interest in developing **generative models** with a focus on tack
 My interests range from the intersection of Bayesian inference and deep learning (such as incorporating prior knowledge and structure within deep neural networks, *multi-task/meta-learning* etc) to research towards *trustworthy* ML for biomedical applications. 
 
 My [PhD thesis](https://ora.ox.ac.uk/objects/uuid:36cdd6fa-fec1-44ca-9f0f-876bee7783d6) focused on extensions of deep generative models, from [Gaussian Process Latent Variable Models](http://proceedings.mlr.press/v97/martens19a.html) to [Variational Autoencoders](https://arxiv.org/abs/2003.03462), with the goal to enable certain notions of [feature-level interpretability](https://arxiv.org/abs/2006.14293) for the analysis of high-dimensional tabular data. 
+
+**News**: I will be presenting our work **"Enhancing generative perturbation models with LLM-informed gene embeddings"** at the [MLGenX workshop](https://mlgenx.github.io/index.html) at ICLR 2024
