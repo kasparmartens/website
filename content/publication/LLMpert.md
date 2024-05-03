@@ -26,7 +26,7 @@ abstract = "Genetic perturbations are key to understanding how genes regulate ce
 abstract_short = "Genetic perturbations are key to understanding how genes regulate cell behavior, yet the ability to predict responses to these perturbations remains a significant challenge. While numerous generative models have been developed for perturbation data, they typically lack the capability to generalize to perturbations not encountered during training. To alleviate this limitation, we introduce a novel methodology that incorporates prior knowledge through embeddings derived from LLMs, effectively informing our predictive models with a deeper biological context. By leveraging this source of pre-existing information, our models achieve SOTA performance in predicting the outcomes of single-gene perturbations."
 
 # Featured image thumbnail (optional)
-image_preview = "
+image_preview = "LLMpert_schema1.png"
 
 # Is this a selected publication? (true/false)
 selected = true
