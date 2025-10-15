@@ -1,6 +1,5 @@
 +++
-title = "SynthPert: Enhancing LLM Biological Reasoning via Synthetic Reasoning Traces for Cellular Perturbation Prediction
-"
+title = "SynthPert: Enhancing LLM Biological Reasoning via Synthetic Reasoning Traces for Cellular Perturbation Prediction"
 date = "2025-10-01"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
