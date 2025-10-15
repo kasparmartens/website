@@ -3,7 +3,7 @@ title = "SynthPert: Enhancing LLM Biological Reasoning via Synthetic Reasoning T
 date = "2025-10-01"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["L Phillips", "M Boubnovski Martell", "A Misra",, "J Stoisser", "C Prada", "R Donovan-Maiye", "K Märtens"]
+authors = ["L Phillips", "M Boubnovski Martell", "A Misra", "J Stoisser", "C Prada", "R Donovan-Maiye", "K Märtens"]
 
 # Publication type.
 # Legend:
