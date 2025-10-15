@@ -60,7 +60,7 @@ highlight = true
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
 [header]
-image = "multimodalVAE_fig1.png"
+image = "LLMpert_schema.png"
 caption = ""
 
 +++
